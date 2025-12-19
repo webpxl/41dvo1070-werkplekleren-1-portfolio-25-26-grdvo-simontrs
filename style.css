@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.pagina-titel{
+    height: 40vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
+
+    .simontorres{
+        color: white;
+        font-size: 100px;
+        font-family:  "Arial Black";
+        text-decoration: none;
+    }
+}
+
+.voorstellen{
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+    justify-content: center;
+    width: 10vw ;
+    align-content: center;
+    flex-wrap: wrap;
+    display: flex;
+
+
+}
+
