@@ -6,7 +6,6 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
     background-color: #3a3a3a;
     background-image: url("assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
     background-position: center;
@@ -16,6 +15,7 @@ body {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
     gap: 60px;
     padding: 50px;
     min-height: 100vh;
@@ -23,12 +23,10 @@ body {
 }
 
 .left {
-    width: 38%;
-    flex: 0 0 38%;
-    max-width: 38%;
+    flex: 1 1 360px;
+    max-width: 520px;
 
     .contacts {
-        font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         width: 100%;
         background: rgb(58, 58, 58);
@@ -70,8 +68,7 @@ body {
 }
 
 .right {
-    width: 62%;
-    flex: 1;
+    flex: 2 1 520px;
     min-width: 0;
 }
 
@@ -117,7 +114,7 @@ h1 {
 }
 
 p {
-    max-width: 600px;
+    max-width: 100%;
     font-size: 20px;
     line-height: 1.7;
     color: #ffffff;
@@ -196,62 +193,4 @@ p {
     font-weight: bold;
     white-space: nowrap;
     font-size: 18px;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-    .container {
-        gap: 30px;
-        padding: 30px;
-    }
-
-    p {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 900px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        max-width: 100%;
-        flex: 0 0 auto;
-    }
-
-    h1 {
-        font-size: 48px;
-    }
-}
-
-@media (max-width: 520px) {
-    .container {
-        padding: 20px;
-    }
-
-    .section-header {
-        font-size: 16px;
-        gap: 10px;
-    }
-
-    .line {
-        height: 3px;
-    }
-
-    h1 {
-        font-size: 38px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .left {
-        .label {
-            font-size: 16px;
-        }
-    }
 }
