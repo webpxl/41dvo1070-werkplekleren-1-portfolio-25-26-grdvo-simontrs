@@ -5,162 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Layout</title>
     <link rel="stylesheet" href="style.css">
-    <script src=""></script>
+    <script defer src="index.js"></script>
 </head>
 <body>
 
-<div class="container">
+<nav>
+    <div class="navigation">
 
-    <div class="left">
+        <ul>
+            <a href="#top" class="logo">
+                <img src="assets/download.png" alt="Simon Torres">
+            </a>
+            <li class="nav-button"><a href="#overmij">OVER MIJ</a></li>
+            <li class="nav-button"><a href="#opleiding">OPLEIDINGEN</a></li>
+            <li class="nav-button"><a href="index.html">WERKERVARINGEN</a></li>
+            <li class="nav-button"><a href="index.html">SKILLS</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="banner">
+    <h1 class="reveal">Welkom op mijn portfolio.<br>Een selectie van mijn werk en projecten</h1>
+</div>
 
-        <div class="section-header">
-            <span>PROFIELFOTO</span>
-            <div class="line"></div>
-        </div>
+<section id="overmij" class="introduction reveal">
+    <div class="introduction-left">
+        <h2>OVER MIJ</h2>
+        <img src="assets/thumbnail_IMG_0700.jpg">
 
-        <br>
+        <div class="contact">
+            <div class="section-header">
+                <span>CONTACT</span>
+                <div class="line"></div>
+            </div>
 
-        <div class="photo">
-            <img src="assets/thumbnail_IMG_0700.jpg" alt="Profile photo">
-        </div>
-
-        <br><br>
-
-        <div class="section-header">
-            <span>CONTACT</span>
-            <div class="line"></div>
-        </div>
-
-        <div class="contact-block">
             <p class="contacts">
-                04 66 32 43 98
-                <br>
-                Simontrs14@outlook.com
+                04 66 32 43 98<br>
+                simontrs14@outlook.com
             </p>
         </div>
-
-        <br><br>
-
-        <div class="section-header">
-            <span>SOFT SKILLS</span>
-            <div class="line"></div>
-        </div>
-
-        <div class="skills-card">
-            <div class="skill">
-                <div class="bar" style="width: 78%;">
-                    <span class="label">Creativiteit</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 92%;">
-                    <span class="label">Office packet</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 75%;">
-                    <span class="label">Flexibel</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 85%;">
-                    <span class="label">Leergierig</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 70%;">
-                    <span class="label">Teamwork</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 65%;">
-                    <span class="label">Design thinking</span>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-
-        <div class="section-header">
-            <span>HARD SKILLS</span>
-            <div class="line"></div>
-        </div>
-
-        <div class="skills-card">
-            <div class="skill">
-                <div class="bar" style="width: 78%;">
-                    <span class="label">Figma</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 92%;">
-                    <span class="label">HTML & CSS</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 75%;">
-                    <span class="label">JavaScript (Basis)</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 85%;">
-                    <span class="label">Adobe Photoshop</span>
-                </div>
-            </div>
-
-            <div class="skill">
-                <div class="bar" style="width: 70%;">
-                    <span class="label">Adobe Illustrator</span>
-                </div>
-            </div>
-        </div>
-
-        <br><br>
-
-        <div class="section-header">
-            <span>TAALKENNIS</span>
-            <div class="line"></div>
-        </div>
-
-        <p class="taalkennis">
-            Nederlands
-            <br>
-            Engels
-        </p>
-
     </div>
 
-    <div class="right">
-
-        <div class="section-header">
-            <div class="line"></div>
-            <span>NAAM</span>
-            <div class="line"></div>
-        </div>
-
-        <br>
-
-        <h1>
-            Simon Torres
-            <br><br>
-            Digitale vormgeving
-        </h1>
-
-        <div class="section-header small">
-            <span>OVER MIJ</span>
-            <div class="line"></div>
-        </div>
-
-        <br>
-
+    <div class="introduction-right">
         <p>
             Ik ben Simon Torres, 19 jaar oud, een leergierige en sociale persoon die houdt van hard werken en
             nieuwe uitdagingen met enthousiasme aangaat. Met mijn nauwkeurige en flexibele instelling weet ik
@@ -170,114 +55,50 @@
             Ik ben op zoek naar een functie waarin ik mijn vaardigheden verder kan ontwikkelen en waarde
             kan toevoegen aan het team
         </p>
+    </div>
+</section>
 
-        <br><br>
+<section class="image-divider"></section>
 
-        <div class="section-header small">
-            <span>OPLEIDINGEN</span>
-            <div class="line"></div>
-        </div>
+<section id="opleiding" class="education-timeline reveal">
+    <h2 class="reveal">OPLEIDINGEN</h2>
 
-        <br>
+    <div class="timeline">
 
-        <div class="education">
-            <div class="edu-item">
-                <div class="edu-left">
-                    <strong>Heilig Hartinstituut Heverlee</strong><br>
-                    <span>Beroeps voorbereiding leren</span>
-                </div>
-                <div class="edu-right">2018 – 2020</div>
-            </div>
-
-            <div class="edu-item">
-                <div class="edu-left">
-                    <strong>Heilig Hartinstituut Heverlee</strong><br>
-                    <span>Office &amp; Retail</span>
-                </div>
-                <div class="edu-right">2020 – 2024</div>
-            </div>
-
-            <div class="edu-item">
-                <div class="edu-left">
-                    <strong>Heilig Hartinstituut Heverlee</strong><br>
-                    <span>Business Support</span>
-                </div>
-                <div class="edu-right">2024 – 2025</div>
-            </div>
-
-            <div class="edu-item">
-                <div class="edu-left">
-                    <strong>PXL Hogeschool Hasselt</strong><br>
-                    <span>Digitale vormgeving</span>
-                </div>
-                <div class="edu-right">2025 – Heden</div>
+        <div class="timeline-item reveal">
+            <span class="year">2018 – 2020</span>
+            <div class="content">
+                <strong>Heilig Hartinstituut Heverlee</strong>
+                <p>Beroeps voorbereiding leren</p>
             </div>
         </div>
 
-        <br><br>
-
-        <div class="section-header small">
-            <span>WERKERVARINGEN</span>
-            <div class="line"></div>
+        <div class="timeline-item reveal">
+            <span class="year">2020 – 2024</span>
+            <div class="content">
+                <strong>Heilig Hartinstituut Heverlee</strong>
+                <p>Office & Retail</p>
+            </div>
         </div>
 
-        <br>
-
-        <div class="werkervaring">
-
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>Carrefour Market (studentenjob)</strong><br>
-                    <span>Kessel-Lo</span>
-                </div>
-                <div class="werk-right">2021 – 2023</div>
+        <div class="timeline-item reveal">
+            <span class="year">2024 – 2025</span>
+            <div class="content">
+                <strong>Heilig Hartinstituut Heverlee</strong>
+                <p>Business Support</p>
             </div>
+        </div>
 
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>Agilitas (stagaire)</strong><br>
-                    <span>Leuven</span>
-                </div>
-                <div class="werk-right">2022 – 2023</div>
+        <div class="timeline-item reveal">
+            <span class="year">2025 – Heden</span>
+            <div class="content">
+                <strong>PXL Hogeschool Hasselt</strong>
+                <p>Digitale vormgeving</p>
             </div>
-
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>Hypermarkt Carrefour (studentenjob)</strong><br>
-                    <span>Tienen</span>
-                </div>
-                <div class="werk-right">2023 – 2024</div>
-            </div>
-
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>A&M Audi (stagaire)</strong><br>
-                    <span>Tienen</span>
-                </div>
-                <div class="werk-right">2024 – 2024</div>
-            </div>
-
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>'t Klein Atheneum (stagaire)</strong><br>
-                    <span>Tienen</span>
-                </div>
-                <div class="werk-right">2023 – 2024</div>
-            </div>
-
-            <div class="werk-item">
-                <div class="werk-left">
-                    <strong>Courir (studentenjob)</strong><br>
-                    <span>Leuven</span>
-                </div>
-                <div class="werk-right">2024 – Heden</div>
-            </div>
-
         </div>
 
     </div>
-
-</div>
+</section>
 
 </body>
 </html>
