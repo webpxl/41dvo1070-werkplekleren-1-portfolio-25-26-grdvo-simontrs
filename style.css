@@ -3,37 +3,55 @@
     margin: 0;
     padding: 0;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
+body {
+     background-color: #3A3A3A;
+     overflow: visible;
+ }
 #overmij {
     scroll-margin-top: 120px;
+
+    @media (max-width: 768px) {
+        scroll-margin-top: 90px;
+    }
+
+    img {
+        width: min(240px, 70vw);
+        border-radius: 12px;
+        display: block;
+    }
 }
 
 #opleiding {
+    scroll-margin-top: 50px;
+
+    @media (max-width: 768px) {
+        scroll-margin-top: 70px;
+    }
+}
+
+#skills {
     scroll-margin-top: 35px;
+
+    @media (max-width: 768px) {
+        scroll-margin-top: 70px;
+    }
 }
 
 .reveal {
     opacity: 0;
     transform: translateY(35px);
-    transition: opacity 2s ease, transform 2s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease;
+
+    &.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.reveal.show {
-    opacity: 1;
-    transform: translateY(0);
-}
 
-
-
-body {
-    background-color: #3A3A3A;
-    overflow: visible;
-
-}
 
 nav {
     position: sticky;
@@ -73,8 +91,27 @@ nav {
         width: 100px;
         display: block;
     }
-}
 
+    @media (max-width: 768px) {
+        padding: 10px 0;
+
+        ul {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+        }
+
+        img {
+            width: 70px;
+        }
+
+        a {
+            font-size: 14px;
+            padding: 8px 12px;
+        }
+    }
+}
 
 .banner {
     height: clamp(420px, 70vh, 780px);
@@ -95,6 +132,15 @@ nav {
         display: inline-block;
         max-width: min(900px, 90%);
     }
+
+    @media (max-width: 768px) {
+        height: clamp(320px, 60vh, 520px);
+
+        h1 {
+            padding: 16px 18px;
+            max-width: 92%;
+        }
+    }
 }
 
 .introduction {
@@ -113,36 +159,6 @@ nav {
         align-items: flex-start;
         gap: 25px;
         color: white;
-
-        h2 {
-            font-family: "Playfair Display";
-            font-size: clamp(28px, 4vw, 36px);
-            margin: 0;
-        }
-
-        img {
-            width: min(240px, 70vw);
-            border-radius: 12px;
-            display: block;
-        }
-    }
-
-    .contact {
-        margin-top: 10px;
-        color: white;
-        font-family: Inter;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .contacts {
-        font-family: Inter;
-        color: white;
-        font-size: 16px;
-        line-height: 1.6;
-        font-weight: normal;
-        margin-top: 10px;
-        word-break: break-word;
     }
 
     .introduction-right {
@@ -161,113 +177,10 @@ nav {
             color: white;
         }
     }
-}
 
-.image-divider {
-    position: relative;
-    height: clamp(180px, 30vw, 300px);
-    background-image: url("Assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
-    background-size: cover;
-    background-position: center;
+    @media (max-width: 768px) {
+        padding: 50px 8%;
 
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-    }
-}
-
-.education-timeline {
-    background-color: #3A3A3A;
-    padding: clamp(60px, 8vw, 120px) 10%;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: clamp(40px, 6vw, 60px);
-
-    h2 {
-        font-family: "Playfair Display";
-        font-size: clamp(32px, 5vw, 44px);
-        margin: 0;
-        text-align: center;
-    }
-
-    .timeline {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        gap: clamp(26px, 4vw, 40px);
-        width: 100%;
-        max-width: 800px;
-        padding-left: clamp(22px, 4vw, 40px);
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 10px;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background-color: #ffffff;
-            opacity: 0.4;
-        }
-
-        .timeline-item {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px 30px;
-            align-items: flex-start;
-            position: relative;
-
-            &::before {
-                content: "";
-                position: absolute;
-                left: -36px;
-                top: 6px;
-                width: 14px;
-                height: 14px;
-                background-color: #ffffff;
-                border-radius: 50%;
-            }
-
-            .year {
-                flex: 0 0 auto;
-                min-width: 120px;
-                font-family: Inter;
-                font-weight: bold;
-                font-size: 16px;
-                opacity: 0.9;
-                white-space: nowrap;
-            }
-
-            .content {
-                flex: 1 1 260px;
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                min-width: 240px;
-
-                strong {
-                    font-family: Inter;
-                    font-size: 18px;
-                }
-
-                p {
-                    font-family: Inter;
-                    font-size: 16px;
-                    line-height: 1.5;
-                    margin: 0;
-                    opacity: 0.85;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 700px) {
-    .introduction {
         .introduction-left {
             align-items: center;
             text-align: center;
@@ -281,28 +194,317 @@ nav {
             }
         }
     }
+}
+
+.image-divider {
+    position: relative;
+    height: clamp(100px, 15vw, 180px);
+    background-image: url("Assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.education-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(30px, 6vw, 120px);
+    padding: clamp(50px, 8vw, 120px) 10%;
+    background-color: #3A3A3A;
+    color: white;
+    align-items: flex-start;
+    justify-content: center;
 
     .education-timeline {
+        flex: 1 1 520px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        min-width: 280px;
+
         .timeline {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: clamp(26px, 4vw, 40px);
+            padding-left: clamp(24px, 4vw, 40px);
+            width: 100%;
+            max-width: 800px;
+
             &::before {
-                left: 6px;
+                content: "";
+                position: absolute;
+                left: 10px;
+                top: 0;
+                bottom: 0;
+                width: 2px;
+                background-color: rgba(255, 255, 255, 0.4);
             }
 
             .timeline-item {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 12px 30px;
+                position: relative;
+                width: 100%;
+
                 &::before {
-                    left: -30px;
+                    content: "";
+                    position: absolute;
+                    left: -36px;
+                    top: 6px;
+                    width: 14px;
+                    height: 14px;
+                    background-color: white;
+                    border-radius: 50%;
                 }
 
                 .year {
-                    min-width: auto;
+                    flex: 0 0 auto;
+                    min-width: 120px;
+                    font-family: Inter;
+                    font-weight: bold;
+                    font-size: 16px;
+                    white-space: nowrap;
                 }
 
                 .content {
-                    min-width: 0;
+                    flex: 1 1 260px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    min-width: 240px;
                 }
+            }
+        }
+    }
+
+    .projects-preview {
+        flex: 1 1 360px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        min-width: 280px;
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            padding: 20px 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 8%;
+
+        .education-timeline {
+            gap: 35px;
+
+            .timeline {
+                padding-left: 28px;
+
+                &::before {
+                    left: 8px;
+                }
+
+                .timeline-item {
+                    gap: 10px 16px;
+
+                    &::before {
+                        left: -28px;
+                    }
+
+                    .year {
+                        min-width: 0;
+                        font-size: 15px;
+                    }
+
+                    .content {
+                        min-width: 0;
+
+                        strong {
+                            font-size: 17px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .projects-preview {
+            gap: 20px;
+
+            .project-card {
+                padding: 16px 18px;
             }
         }
     }
 }
 
+.experience-section {
+    background-color: #3A3A3A;
+    color: white;
+    padding: clamp(60px, 8vw, 120px) 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
+    h2 {
+        font-family: "Playfair Display";
+        font-size: clamp(32px, 5vw, 44px);
+        margin: 0;
+    }
+
+    .experience-list {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        max-width: 900px;
+    }
+
+    .experience-card {
+        padding: 24px 28px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        strong {
+            font-family: Inter;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        .experience-meta {
+            font-family: Inter;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        p {
+            font-family: Inter;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 6px 0 0;
+            opacity: 0.85;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 8%;
+
+        .experience-card {
+            padding: 18px 20px;
+        }
+    }
+}
+
+.skills-context {
+    background-color: #3A3A3A;
+    color: white;
+    padding: clamp(60px, 8vw, 120px) 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    h2 {
+        font-family: "Playfair Display";
+        font-size: clamp(32px, 5vw, 44px);
+        margin: 0;
+    }
+
+    .skills-columns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: clamp(30px, 6vw, 80px);
+        align-items: flex-start;
+    }
+
+    .skills-block {
+        flex: 1 1 420px;
+        min-width: 280px;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 26px 28px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+
+        .skills-title {
+            font-family: Inter;
+            font-size: 13px;
+            letter-spacing: 2px;
+            opacity: 0.85;
+        }
+
+        .skill-row {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+            strong {
+                font-family: Inter;
+                font-size: 16px;
+                font-weight: 700;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: 15px;
+                line-height: 1.6;
+                margin: 0;
+                opacity: 0.85;
+            }
+        }
+
+        .skill-row:first-of-type {
+            border-top: 0;
+            padding-top: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        padding: 60px 8%;
+        gap: 35px;
+
+        .skills-columns {
+            gap: 24px;
+        }
+
+        .skills-block {
+            padding: 20px 18px;
+
+            .skills-title {
+                font-size: 12px;
+            }
+
+            .skill-row {
+                padding-top: 12px;
+
+                strong {
+                    font-size: 15px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
