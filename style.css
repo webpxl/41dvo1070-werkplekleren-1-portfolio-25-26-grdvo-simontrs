@@ -64,16 +64,14 @@ nav {
     top: 0;
     z-index: 1000;
     width: 100%;
-    background: #3A3A3A;
-
+    background: rgba(58, 58, 58, 0.7);
+    backdrop-filter: blur(1px);
 }
 
 .navigation {
     padding: 4px 0;
     display: flex;
     justify-content: center;
-
-
 
     ul {
         list-style: none;
@@ -83,9 +81,6 @@ nav {
         flex-wrap: wrap;
         gap: 15px;
         padding: 10px 20px;
-
-
-
     }
 
     a {
@@ -97,7 +92,6 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-
     }
 
     img {
@@ -113,7 +107,6 @@ nav {
             align-items: center;
             gap: 10px;
             padding: 10px 14px;
-
         }
 
         img {
@@ -123,21 +116,22 @@ nav {
         a {
             font-size: 14px;
             padding: 8px 12px;
-
         }
     }
 }
 
+
 .banner {
     height: clamp(420px, 70vh, 780px);
     width: 100%;
-    background-image: url("Assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
+    background-image: url("assets/backgrounds/derrick-cooper-L505cPnmIds-unsplash.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
 
     h1 {
         color: white;
@@ -217,7 +211,7 @@ nav {
 .image-divider {
     position: relative;
     height: clamp(100px, 15vw, 180px);
-    background-image: url("Assets/derrick-cooper-L505cPnmIds-unsplash.jpg");
+    background-image: url("assets/backgrounds/derrick-cooper-L505cPnmIds-unsplash.jpg");
     background-size: cover;
     background-position: center;
 
@@ -251,7 +245,7 @@ nav {
             position: relative;
             display: flex;
             flex-direction: column;
-            gap: clamp(26px, 4vw, 40px);
+            gap: clamp(72px, 16vw, 128px);
             padding-left: clamp(24px, 4vw, 40px);
             width: 100%;
             max-width: 800px;
@@ -304,71 +298,104 @@ nav {
         }
     }
 
+
     .projects-preview {
         flex: 1 1 360px;
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 22px;
         min-width: 280px;
 
-        .project-card {
+        .project {
             background: rgba(255, 255, 255, 0.05);
             border-radius: 14px;
             padding: 20px 24px;
+            border: 5px solid #D1D3C4;
             display: flex;
             flex-direction: column;
-            gap: 6px;
-            border-color: #7B904B;
-            border-width: 5px;
-            border-style: solid;
+            gap: 14px;
         }
+
+        .project-head {
+            strong { display: block; }
+            p { margin: 6px 0 0; opacity: .85; }
+        }
+
+        .carousel {
+            position: relative;
+
+
+            &:hover .carousel-btn,
+            &:focus-within .carousel-btn {
+                opacity: 1;
+            }
+        }
+
+        .carousel-track {
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+            scroll-behavior: smooth;
+            border-radius: 12px;
+
+            img {
+                width: 100%;
+                flex: 0 0 100%;
+                aspect-ratio: 16 / 9;
+                object-fit: contain;
+                display: block;
+                background: #1E1E1E;
+            }
+
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 42px;
+            height: 42px;
+            border-radius: 999px;
+            border: 2px solid #D1D3C4;
+            background: rgba(0,0,0,0.35);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+
+
+            opacity: 0;
+            transition: opacity 0.2s ease, background 0.2s ease;
+
+            &:focus-visible {
+                outline: 2px solid #D1D3C4;
+                outline-offset: 3px;
+                opacity: 1;
+            }
+
+            &:hover {
+                background: rgba(0,0,0,0.5);
+            }
+        }
+
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
     }
 
     @media (max-width: 768px) {
         padding: 60px 8%;
 
-        .education-timeline {
-            gap: 35px;
-
-            .timeline {
-                padding-left: 28px;
-
-                &::before {
-                    left: 8px;
-                }
-
-                .timeline-item {
-                    gap: 10px 16px;
-
-                    &::before {
-                        left: -28px;
-                    }
-
-                    .year {
-                        min-width: 0;
-                        font-size: 15px;
-                    }
-
-                    .content {
-                        min-width: 0;
-
-                        strong {
-                            font-size: 17px;
-                        }
-
-                        p {
-                            font-size: 15px;
-                        }
-                    }
-                }
-            }
-        }
-
         .projects-preview {
             gap: 20px;
 
-            .project-card {
+            .project {
                 padding: 16px 18px;
+            }
+
+            .carousel-btn {
+                width: 38px;
+                height: 38px;
+                opacity: 1;
             }
         }
     }
@@ -403,7 +430,7 @@ nav {
         display: flex;
         flex-direction: column;
         gap: 6px;
-        border-color: #7B904B;
+        border-color: #D1D3C4;
         border-width: 5px;
         border-style: solid;
 
@@ -469,7 +496,7 @@ nav {
         border-radius: 18px;
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-color: #7B904B;
+        border-color: #D1D3C4;
         border-width: 5px;
         border-style: solid;
 
@@ -539,3 +566,38 @@ nav {
         }
     }
 }
+
+[hidden] {
+    display: none !important;
+}
+
+
+.lightbox{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: grid;
+    place-items: center;
+    z-index: 9999;
+}
+
+.lightbox img{
+    max-width: 90vw;
+    max-height: 85vh;
+    object-fit: contain;
+    border-radius: 14px;
+}
+
+.lightbox-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 32px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+

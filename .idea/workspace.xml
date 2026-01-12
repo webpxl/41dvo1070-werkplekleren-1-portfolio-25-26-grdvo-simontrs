@@ -5,8 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3959bfe-4b02-4ed3-b211-ec207cae78d3" name="Changes" comment="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css">
+      <change afterPath="$PROJECT_DIR$/assets/project/Figma 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/project/Figma 2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/project/Scripting 1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/project/Scripting 2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Image (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/Image (1).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Image (2).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/Image (2).jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/S I TO.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/andre-costa-N_w8L_b1sbU-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/andre-costa-N_w8L_b1sbU-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/annie-spratt-6a3nqQ1YwBw-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/annie-spratt-6a3nqQ1YwBw-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/derrick-cooper-L505cPnmIds-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/derrick-cooper-L505cPnmIds-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dino-reichmuth-kk3W5-0b6e0-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/dino-reichmuth-kk3W5-0b6e0-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/download.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/download.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/jonathan-tesmaye-salvador-V0z1xRcD7GA-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/jonathan-tesmaye-salvador-V0z1xRcD7GA-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/mike-hindle-QRTINALdbq8-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/mike-hindle-QRTINALdbq8-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/nik-iurev-Pk1MrGNquo8-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/nik-iurev-Pk1MrGNquo8-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/roland-larsson-8AceP6OOF3o-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/roland-larsson-8AceP6OOF3o-unsplash.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_0225.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_0225.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_0700.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_0700.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_2035.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_2035.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_2435.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_2435.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_2813.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_2813.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_2920.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_2920.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_3169.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_3169.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/thumbnail_IMG_3517.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/simon/thumbnail_IMG_3517.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/ty-koh-s5yD7elQbHM-unsplash.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets/backgrounds/ty-koh-s5yD7elQbHM-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +91,7 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/simon/Desktop/41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs",
+    "last_opened_file_path": "C:/Users/simon/Desktop/41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs/assets/project",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,7 +104,12 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\simon\Desktop\41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs\assets\project" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\simon\Desktop\41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs\assets\simon" />
+      <recent name="C:\Users\simon\Desktop\41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs\assets\backgrounds" />
       <recent name="C:\Users\simon\Desktop\41dvo1070-werkplekleren-1-portfolio-25-26-grdvo-simontrs\assets" />
     </key>
   </component>
@@ -120,7 +151,8 @@
       <workItem from="1768071203792" duration="17780000" />
       <workItem from="1768130578924" duration="10646000" />
       <workItem from="1768157241688" duration="1447000" />
-      <workItem from="1768210698231" duration="5003000" />
+      <workItem from="1768210698231" duration="5026000" />
+      <workItem from="1768237417598" duration="8146000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -250,7 +282,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768212993629</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css">
+      <option name="closed" value="true" />
+      <created>1768215822238</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1768215822238</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
