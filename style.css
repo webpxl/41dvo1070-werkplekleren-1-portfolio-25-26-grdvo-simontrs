@@ -34,7 +34,7 @@ body {
     scroll-margin-top: 35px;
 
     @media (max-width: 768px) {
-        scroll-margin-top: 70px;
+        scroll-margin-top: 60px;
     }
 }
 
