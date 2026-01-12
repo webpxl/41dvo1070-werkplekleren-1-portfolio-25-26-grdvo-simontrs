@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e3959bfe-4b02-4ed3-b211-ec207cae78d3" name="Changes" comment="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css" />
+    <list default="true" id="e3959bfe-4b02-4ed3-b211-ec207cae78d3" name="Changes" comment="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +38,9 @@
     &quot;accountId&quot;: &quot;ddd85343-3230-4039-9e7a-4e13fe8aef8f&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -113,7 +119,7 @@
       <workItem from="1768071203792" duration="17780000" />
       <workItem from="1768130578924" duration="10646000" />
       <workItem from="1768157241688" duration="1447000" />
-      <workItem from="1768210698231" duration="246000" />
+      <workItem from="1768210698231" duration="2226000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <option name="closed" value="true" />
@@ -219,7 +225,23 @@
       <option name="project" value="LOCAL" />
       <updated>1768158710596</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css">
+      <option name="closed" value="true" />
+      <created>1768211002677</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1768211002677</updated>
+    </task>
+    <task id="LOCAL-00015" summary="test&#10;&#10;First commit&#10;&#10;&#10;header aangepast&#10;&#10;java script toegevoegd&#10;&#10;html en css bewerkt&#10;&#10;html aangepast&#10;&#10;website aangepast&#10;&#10;html en css">
+      <option name="closed" value="true" />
+      <created>1768211251461</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1768211251461</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
