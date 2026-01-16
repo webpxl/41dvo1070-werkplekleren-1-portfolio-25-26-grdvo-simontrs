@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn portfolio</title>
+
+    <link href="HTTPS://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+<nav>
+    <div class="navigation" id="site-nav">
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" type="button">
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+
+        <ul id="primary-nav">
+            <li class="logo">
+                <a href="index.html" class="logo-link">
+                    <img src="assets/simon/download.png" alt="Simon Torres">
+                </a>
+            </li>
+
+            <li class="nav-button"><a href="#about">OVER MIJ</a></li>
+            <li class="nav-button"><a href="#education">OPLEIDINGEN / PROJECTEN</a></li>
+            <li class="nav-button"><a href="#experience">WERKERVARING</a></li>
+            <li class="nav-button"><a href="#skills">SKILLS</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="banner">
+    <h1 class="reveal">
+        Welkom op mijn portfolio.<br>
+        Een selectie van mijn werk en projecten.
+    </h1>
+</div>
+
+<
+<section id="about" class="about-section reveal">
+    <div class="about-left">
+        <h2>OVER MIJ</h2>
+        <img src="assets/simon/thumbnail_IMG_0225.jpg" alt="Simon Torres">
+
+        <div class="contact-section">
+            <div class="section-header">
+                <span>CONTACT</span>
+                <div class="divider-line"></div>
+            </div>
+
+            <p class="contact-info">
+                <a href="mailto:simontrs14@outlook.com">
+                    simontrs14@outlook.com
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <div class="about-right">
+        <p>
+            Ik ben Simon Torres, 19 jaar oud en student Digitale Vormgeving.
+            Ik ben een leergierige en creatieve persoon die nauwkeurig werkt
+            en graag nieuwe uitdagingen aangaat.
+            <br><br>
+            Ik koos voor Digitale Vormgeving omdat ik creativiteit wil combineren
+            met technologie en ideeën wil omzetten in sterke, visuele ontwerpen.
+            Wat mij speciaal maakt, is mijn oog voor detail en mijn motivatie
+            om mezelf voortdurend te verbeteren.
+            <br><br>
+            Door mijn flexibele instelling, creatief denkvermogen en openheid
+            voor feedback ben ik een goede digitale vormgever. Ik werk graag
+            zelfstandig, maar functioneer ook sterk in team.
+        </p>
+    </div>
+</section>
+
+<section class="image-divider"></section>
+
+
+<section id="education" class="education-projects reveal">
+
+    <div class="education-timeline reveal">
+        <h2>OPLEIDINGEN</h2>
+
+        <div class="timeline">
+
+            <div class="timeline-item reveal">
+                <span class="year">2018 – 2020</span>
+                <div class="timeline-content">
+                    <strong>Heilig Hartinstituut Heverlee</strong>
+                    <p>Beroeps voorbereidend leren</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <span class="year">2020 – 2024</span>
+                <div class="timeline-content">
+                    <strong>Heilig Hartinstituut Heverlee</strong>
+                    <p>Office & Retail</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <span class="year">2024 – 2025</span>
+                <div class="timeline-content">
+                    <strong>Heilig Hartinstituut Heverlee</strong>
+                    <p>Business Support</p>
+                </div>
+            </div>
+
+            <div class="timeline-item reveal">
+                <span class="year">2025 – Heden</span>
+                <div class="timeline-content">
+                    <strong>PXL Hogeschool Hasselt</strong>
+                    <p>Digitale vormgeving</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="projects-preview reveal">
+        <h2>PROJECTEN</h2>
+
+        <article class="project-card">
+            <div class="project-header">
+                <strong>UI Design</strong>
+                <p>App design</p>
+            </div>
+
+            <div class="carousel" data-carousel>
+                <button class="carousel-btn prev" aria-label="Vorige foto" data-prev>‹</button>
+
+                <div class="carousel-track" data-track>
+                    <img src="assets/project/Figma%201.png" alt="UI Design screenshot 1" data-lightbox>
+                    <img src="assets/project/Figma%202.png" alt="UI Design screenshot 2" data-lightbox>
+                    <img src="assets/project/Figma%203.png" alt="UI Design screenshot 3" data-lightbox>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Volgende foto" data-next>›</button>
+            </div>
+        </article>
+
+        <article class="project-card">
+            <div class="project-header">
+                <strong>Scripting</strong>
+                <p>Take away website</p>
+            </div>
+
+            <div class="carousel" data-carousel>
+                <button class="carousel-btn prev" aria-label="Vorige foto" data-prev>‹</button>
+
+                <div class="carousel-track" data-track>
+                    <img src="assets/project/Scripting%201.png" alt="Take away screenshot 1" data-lightbox>
+                    <img src="assets/project/Scripting%202.png" alt="Take away screenshot 2" data-lightbox>
+                </div>
+
+                <button class="carousel-btn next" aria-label="Volgende foto" data-next>›</button>
+            </div>
+        </article>
+    </div>
+
+</section>
+
+<div class="lightbox" hidden>
+    <button class="lightbox-close" aria-label="Sluiten">×</button>
+    <img src="" alt="">
+</div>
+
+<section class="image-divider"></section>
+
+<section id="experience" class="experience-section reveal">
+    <h2>WERKERVARING</h2>
+
+    <div class="experience-list">
+        <div class="experience-card">
+            <strong>Studentenjob – Courir</strong>
+            <span class="experience-meta">Leuven · 2024 – Heden</span>
+            <p>Klantenservice, stockist, verkoper en teamwork in een dynamische retailomgeving.</p>
+        </div>
+
+        <div class="experience-card">
+            <strong>Stage – A&amp;M Audi</strong>
+            <span class="experience-meta">Tienen · 2024</span>
+            <p>Administratieve ondersteuning en kennismaking met professionele bedrijfsprocessen.</p>
+        </div>
+
+        <div class="experience-card">
+            <strong>Stage – t' Klein Atheneum</strong>
+            <span class="experience-meta">Tienen · 2023 – 2025</span>
+            <p>Administratieve ondersteuning, telefoons opnemen, laptops installeren en updaten.</p>
+        </div>
+    </div>
+</section>
+
+<section class="image-divider"></section>
+
+<section id="skills" class="skills-section reveal">
+    <h2>SKILLS</h2>
+
+    <div class="skills-columns reveal">
+
+        <div class="skills-block">
+            <span class="skills-title">SOFT SKILLS</span>
+
+            <div class="skill-row">
+                <strong>Communicatief</strong>
+                <p>Duidelijk samenwerken en feedback verwerken.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>Leergierig</strong>
+                <p>Nieuwe tools en methodes snel oppikken.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>Teamgericht</strong>
+                <p>Graag samenwerken en verantwoordelijkheid nemen.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>Nauwkeurig</strong>
+                <p>Oog voor detail en consistente afwerking.</p>
+            </div>
+        </div>
+
+        <div class="skills-block">
+            <span class="skills-title">HARD SKILLS</span>
+
+            <div class="skill-row">
+                <strong>HTML &amp; CSS</strong>
+                <p>Responsive pagina’s bouwen en layouts uitwerken.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>JavaScript (basis)</strong>
+                <p>Kleine interacties en eenvoudige functionaliteit.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>Figma</strong>
+                <p>Wireframes, UI ontwerpen en prototypes.</p>
+            </div>
+
+            <div class="skill-row">
+                <strong>Adobe Suite</strong>
+                <p>Beeldbewerking en grafische assets (PS / AI).</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <a href="mailto:simontrs14@outlook.com">
+        simontrs14@outlook.com
+    </a>
+    <a href="https://www.instagram.com/simontrs_/">Instagram</a> |
+</footer>
+
+</body>
+</html>
