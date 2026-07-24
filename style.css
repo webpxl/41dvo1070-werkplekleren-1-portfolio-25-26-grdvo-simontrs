@@ -17,25 +17,28 @@ body{
     display:flex;
     width:100%;
     height:100vh;
+    overflow:hidden;
 }
 
 .left{
     width:55%;
-    padding:80px 120px;
+    height:100%;
+    padding:4vw 6vw;
     display:flex;
     justify-content:center;
     flex-direction:column;
+    overflow:hidden;
 }
 
 .oranje{
-    font-size:120px;
+    font-size:clamp(3rem, 7vw, 7.5rem);
     font-weight:900;
     color:#FF7F11;
     line-height:0.9;
 }
 
 .outline{
-    font-size:120px;
+    font-size:clamp(3rem, 7vw, 7.5rem);
     font-weight:900;
     color:#fff;
     line-height:1;
@@ -44,59 +47,60 @@ body{
 .label{
     display:inline-block;
     width:fit-content;
-    margin:40px 0;
-    padding:15px 28px;
+    margin:clamp(1rem, 3vh, 2.5rem) 0;
+    padding:0.8rem 1.5rem;
     background:#FF7F11;
     color:#fff;
-    font-size:20px;
+    font-size:clamp(0.8rem, 1.2vw, 1.25rem);
     font-weight:bold;
-    border-radius:8px;
-    letter-spacing:2px;
+    border-radius:0.5rem;
+    letter-spacing:0.1rem;
 }
 
 .left p{
-    max-width:650px;
-    font-size:22px;
-    line-height:1.8;
-    color:#ffffff;
-    margin-bottom:25px;
+    max-width:40rem;
+    font-size:clamp(0.9rem, 1.3vw, 1.4rem);
+    line-height:1.5;
+    color:#fff;
+    margin-bottom:clamp(0.7rem, 2vh, 1.5rem);
 }
 
 .buttons{
     display:flex;
-    gap:25px;
-    margin-top:30px;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:clamp(0.7rem, 2vh, 1.8rem);
 }
 
 .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
     text-decoration:none;
-    padding:18px 40px;
-    border-radius:8px;
-    font-size:18px;
+    padding:0.9rem 2rem;
+    border-radius:0.5rem;
+    font-size:clamp(0.9rem, 1.1vw, 1.1rem);
     font-weight:bold;
-    transition: all 0.3s ease;
-}
-.btn:hover{
-    background: #fff;
-    color: #FF7F11;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    border-color: #fff;
+    transition:all 0.3s ease;
 }
 
-.filled{
+.btn:hover{
+    background:#fff;
+    color:#FF7F11;
+    transform:translateY(-0.2rem);
+    box-shadow:0 0.5rem 1.25rem rgba(0,0,0,0.2);
+    border-color:#fff;
+}
+
+.filled,
+.outline-btn{
     background:#FF7F11;
     color:#fff;
 }
 
-.outline-btn{
-    background:#FF7F11;
-    color:#ffffff;
-}
-
 .right{
     width:45%;
-    height:100vh;
+    height:100%;
     overflow:hidden;
 }
 
@@ -108,34 +112,63 @@ body{
     display:block;
 }
 
-@media (max-width:1000px){
-
-    body{
-        overflow:auto;
-    }
-
+@media (max-width:850px){
     .hero{
         flex-direction:column;
-        height:auto;
-    }
-
-    .left,
-    .right{
-        width:100%;
-        height:auto;
     }
 
     .left{
-        padding:50px 30px;
+        width:100%;
+        height:60%;
+        padding:2rem;
     }
 
     .right{
-        height:60vh;
+        width:100%;
+        height:40%;
     }
 
-    .blue,
+    .oranje,
     .outline{
-        font-size:70px;
+        font-size:clamp(2.5rem, 10vw, 4.5rem);
     }
 
+    .label{
+        margin:1rem 0;
+        padding:0.6rem 1rem;
+    }
+
+    .left p{
+        font-size:clamp(0.8rem, 2vw, 1rem);
+        line-height:1.4;
+        margin-bottom:0.7rem;
+    }
+
+    .buttons{
+        margin-top:0.5rem;
+    }
+
+    .btn{
+        padding:0.7rem 1.3rem;
+    }
+}
+
+@media (max-width:500px){
+    .left{
+        height:65%;
+        padding:1.25rem;
+    }
+
+    .right{
+        height:35%;
+    }
+
+    .buttons{
+        gap:0.6rem;
+    }
+
+    .btn{
+        flex:1;
+        padding:0.65rem 0.8rem;
+    }
 }
