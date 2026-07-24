@@ -61,7 +61,7 @@ body{
     max-width:40rem;
     font-size:clamp(0.9rem, 1.3vw, 1.4rem);
     line-height:1.5;
-    color:cadetblue;
+    color:white;
     margin-bottom:clamp(0.7rem, 2vh, 1.5rem);
 }
 
