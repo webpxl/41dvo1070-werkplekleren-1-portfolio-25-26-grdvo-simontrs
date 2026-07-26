@@ -1,25 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" href="overmij.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Over mij</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 </head>
+
 <body>
+
 <nav class="navbar">
-    <a href="index.html"><i class="fa-solid fa-house"></i></a>
-    <a href="overmij.html"><i class="fa-solid fa-user"></i></a>
-    <a href="carriere.html"><i class="fa-solid fa-briefcase"></i></a>
-    <a href="projecten.html"><i class="fa-solid fa-folder-open"></i></a>
-    <a href="contact.html"><i class="fa-solid fa-paper-plane"></i></a>
+    <a href="startpagina.html" aria-label="Startpagina">
+        <i class="fa-solid fa-house"></i>
+    </a>
+
+    <a href="overmij.html" class="active" aria-label="Over mij">
+        <i class="fa-solid fa-user"></i>
+    </a>
+
+    <a href="carriere.html" aria-label="Carrière">
+        <i class="fa-solid fa-briefcase"></i>
+    </a>
+
+    <a href="projecten.html" aria-label="Projecten">
+        <i class="fa-solid fa-folder-open"></i>
+    </a>
+
+    <a href="contact.html" aria-label="Contact">
+        <i class="fa-solid fa-paper-plane"></i>
+    </a>
 </nav>
 
 <main class="over-mij">
 
-    <div class="foto">
-        <img src="assets/simon/Image%20(7).jpg" alt="Simon"/>
+    <div class="links">
+
+        <div class="foto">
+            <img src="assets/simon/Image%20(7).jpg" alt="Simon">
+        </div>
+
+        <div class="profiel-kaart">
+
+            <div class="profiel-kop">
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+                    <h2>Simon</h2>
+                    <p>Student Digital Design</p>
+                </div>
+            </div>
+
+            <div class="profiel-lijn"></div>
+
+            <div class="eigenschappen">
+
+                <div>
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Creatief</span>
+                </div>
+
+                <div>
+                    <i class="fa-regular fa-lightbulb"></i>
+                    <span>Leergierig</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-bullseye"></i>
+                    <span>Gedreven</span>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
     <div class="content">
@@ -52,6 +111,53 @@
             <span>Figma</span>
             <span>Photoshop</span>
             <span>JavaScript</span>
+        </div>
+
+        <div class="extra-info">
+
+            <div class="info-blok">
+                <div class="info-icoon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="info-tekst">
+                    <h3>Opleiding</h3>
+                    <p>
+                        Ik volg de opleiding Digital Design, waar ik leer werken
+                        aan websites, grafische ontwerpen en gebruiksvriendelijke
+                        interfaces.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-blok">
+                <div class="info-icoon">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+
+                <div class="info-tekst">
+                    <h3>Interesses</h3>
+                    <p>
+                        Naast webdesign heb ik interesse in fotografie, digitale
+                        media, muziek en nieuwe ontwerptechnieken.
+                    </p>
+                </div>
+            </div>
+
+            <div class="info-blok">
+                <div class="info-icoon">
+                    <i class="fa-solid fa-bullseye"></i>
+                </div>
+
+                <div class="info-tekst">
+                    <h3>Mijn doel</h3>
+                    <p>
+                        Mijn doel is om mezelf verder te ontwikkelen als digital
+                        designer en gebruiksvriendelijke websites te maken.
+                    </p>
+                </div>
+            </div>
+
         </div>
 
         <a href="projecten.html" class="project-knop">
