@@ -16,14 +16,9 @@ body {
     background: #BCB8B1;
 }
 
-/* =========================
-   STARTPAGINA
-========================= */
-
 .startpagina {
     display: flex;
     width: 100%;
-    overflow: hidden;
     min-height: 100vh;
 
     .left {
@@ -123,7 +118,7 @@ body {
     }
 
     @media (max-width: 850px) {
-        /* Was eerst .hero; daardoor werkte de mobiele layout niet. */
+
         flex-direction: column;
 
         .left {
@@ -190,10 +185,6 @@ body {
     }
 }
 
-/* =========================
-   NAVIGATIE
-========================= */
-
 .navbar {
     position: fixed;
     top: 50%;
@@ -243,10 +234,6 @@ body {
         border-radius: 2rem;
     }
 }
-
-/* =========================
-   OVER MIJ
-========================= */
 
 .over-mij {
     min-height: 100vh;
@@ -649,7 +636,6 @@ body {
     }
 }
 
-/* Minder animatie voor gebruikers die dit hebben ingesteld. */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
