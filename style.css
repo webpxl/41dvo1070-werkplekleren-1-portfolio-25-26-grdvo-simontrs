@@ -1,529 +1,635 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
     width:100%;
-    height:100%;
 }
 
 body{
     width:100%;
-    height:100%;
-    margin:0;
+    min-height:100vh;
+    overflow-x:hidden;
     font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
+    background:#fff;
 }
+
+/* STARTPAGINA */
 
 .startpagina{
-    display:flex;
     width:100%;
     height:100vh;
+    display:flex;
     overflow:hidden;
-
-    .left{
-        width:55%;
-        height:100%;
-        min-width:0;
-        padding:clamp(2rem, 4vw, 5rem) clamp(2rem, 6vw, 7rem);
-        display:flex;
-        justify-content:center;
-        flex-direction:column;
-        overflow:hidden;
-    }
-
-    .oranje,
-    .outline{
-        overflow-wrap:anywhere;
-        font-size:clamp(3rem, 7vw, 7.5rem);
-        font-weight:900;
-        line-height:0.95;
-    }
-
-    .oranje{
-        color:#FF7F11;
-    }
-
-    .outline{
-        color: #6D696A;
-    }
-
-    .label{
-        display:inline-block;
-        width:fit-content;
-        max-width:100%;
-        margin:clamp(1rem, 3vh, 2.5rem) 0;
-        padding:0.8rem 1.5rem;
-        background:#FF7F11;
-        color:#fff;
-        font-size:clamp(0.8rem, 1.2vw, 1.25rem);
-        font-weight:bold;
-        border-radius:0.5rem;
-        letter-spacing:0.1rem;
-        text-align:center;
-    }
-
-    .left p{
-        max-width:40rem;
-        font-size:clamp(0.95rem, 1.3vw, 1.4rem);
-        line-height:1.5;
-        color: #6D696A;
-        margin-bottom:clamp(0.7rem, 2vh, 1.5rem);
-    }
-
-    .buttons{
-        display:flex;
-        flex-wrap:wrap;
-        gap:1rem;
-        margin-top:clamp(1rem, 2vh, 3rem);
-    }
-
-    .btn{
-        display:inline-flex;
-        align-items:center;
-        justify-content:center;
-        min-height:3rem;
-        padding:1rem clamp(1.4rem, 3vw, 3rem);
-        border:0.15rem solid #FF7F11;
-        border-radius:0.5rem;
-        background:#FF7F11;
-        color:#fff;
-        text-decoration:none;
-        text-align:center;
-        font-size:clamp(0.95rem, 1.2vw, 1.1rem);
-        font-weight:bold;
-        transition:0.3s ease;
-    }
-
-    .btn:hover,
-    .btn:focus-visible{
-        background:#fff;
-        color:#FF7F11;
-        transform:translateY(-0.2rem);
-        box-shadow:0 0.5rem 1.25rem rgba(0,0,0,0.2);
-        border-color:#fff;
-    }
-
-    .right{
-        width:45%;
-        height:100%;
-        overflow:hidden;
-    }
-
-    .right img{
-        width:100%;
-        height:100%;
-        object-fit:cover;
-        object-position:center;
-        display:block;
-    }
-
-    @media(max-width:850px){
-        flex-direction:column;
-
-        .left{
-            width:100%;
-            height:62%;
-            padding:1.5rem 2rem;
-        }
-
-        .right{
-            width:100%;
-            height:38%;
-        }
-
-        .oranje,
-        .outline{
-            font-size:clamp(2.3rem, 9vw, 4rem);
-        }
-
-        .label{
-            margin:0.7rem 0;
-            padding:0.55rem 1rem;
-        }
-
-        .left p{
-            font-size:clamp(0.8rem, 2vw, 1rem);
-            line-height:1.35;
-            margin-bottom:0.5rem;
-        }
-
-        .buttons{
-            margin-top:0.5rem;
-        }
-
-        .btn{
-            padding:0.65rem 1.2rem;
-            min-height:2.5rem;
-        }
-    }
-
-    @media(max-width:500px){
-        .left{
-            height:68%;
-            padding:1rem 1.25rem;
-        }
-
-        .right{
-            height:32%;
-        }
-
-        .oranje,
-        .outline{
-            font-size:clamp(2rem, 10vw, 3.2rem);
-        }
-
-        .label{
-            width:fit-content;
-            font-size:0.75rem;
-        }
-
-        .buttons{
-            flex-direction:row;
-            gap:0.5rem;
-        }
-
-        .btn{
-            width:auto;
-            flex:1;
-            padding:0.55rem 0.7rem;
-            font-size:0.8rem;
-        }
-    }
 }
 
-.binnenpagina{
-    padding-left:22rem;
-}
-
-.zijbalk{
-    position:fixed;
-    top:0;
-    left:0;
-    width:22rem;
-    height:100vh;
+.startpagina .left{
+    width:55%;
+    height:100%;
+    min-width:0;
+    padding:clamp(2rem, 4vw, 5rem) clamp(2rem, 6vw, 7rem);
     display:flex;
     flex-direction:column;
-    align-items:center;
-    padding:3rem 2rem;
-    background:#6D696A;
-    color: #6D696A;
-    z-index:900;
-
-    .zijbalk-profiel{
-        width:100%;
-        text-align:center;
-
-        .zijbalk-foto{
-            width:13rem;
-            height:13rem;
-            margin:0 auto 2rem;
-            overflow:hidden;
-            border:0.35rem solid #FF7F11;
-            border-radius:50%;
-
-            img{
-                width:100%;
-                height:100%;
-                display:block;
-                object-fit:cover;
-                object-position:center;
-            }
-        }
-
-        h2{
-            margin-bottom:0.5rem;
-            color:#fff;
-            font-size:1.8rem;
-        }
-
-        p{
-            color:#FF7F11;
-            font-size:0.95rem;
-            font-weight:600;
-            letter-spacing:0.1rem;
-            text-transform:uppercase;
-        }
-
-        .zijbalk-lijn{
-            width:4rem;
-            height:0.2rem;
-            margin:3rem auto;
-            background:#FF7F11;
-            border-radius:1rem;
-        }
-    }
-
-    .zijbalk-links{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        gap:1.8rem;
-
-        a{
-            position:relative;
-            color:rgba(255,255,255,0.7);
-            text-decoration:none;
-            font-size:1rem;
-            font-weight:700;
-            letter-spacing:0.15rem;
-            text-transform:uppercase;
-            transition:0.3s ease;
-
-            &::after{
-                content:"";
-                position:absolute;
-                left:50%;
-                bottom:-0.6rem;
-                width:0;
-                height:0.15rem;
-                background:#FF7F11;
-                transform:translateX(-50%);
-                transition:0.3s ease;
-            }
-
-            &:hover,
-            &.active{
-                color:#fff;
-
-                &::after{
-                    width:100%;
-                }
-            }
-        }
-    }
+    justify-content:center;
+    overflow:hidden;
 }
+
+.startpagina .oranje,
+.startpagina .outline{
+    overflow-wrap:anywhere;
+    font-size:clamp(3rem, 7vw, 7.5rem);
+    font-weight:900;
+    line-height:0.95;
+}
+
+.startpagina .oranje{
+    color:#FF7F11;
+}
+
+.startpagina .outline{
+    color:#6D696A;
+}
+
+.startpagina .label{
+    width:fit-content;
+    max-width:100%;
+    margin:clamp(1rem, 3vh, 2.5rem) 0;
+    padding:0.8rem 1.5rem;
+    background:#FF7F11;
+    color:#fff;
+    border-radius:0.5rem;
+    font-size:clamp(0.8rem, 1.2vw, 1.25rem);
+    font-weight:700;
+    letter-spacing:0.1rem;
+    text-align:center;
+}
+
+.startpagina .left p{
+    max-width:40rem;
+    margin-bottom:clamp(0.7rem, 2vh, 1.5rem);
+    color:#6D696A;
+    font-size:clamp(0.95rem, 1.3vw, 1.4rem);
+    line-height:1.5;
+}
+
+.startpagina .buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    margin-top:clamp(1rem, 2vh, 3rem);
+}
+
+.startpagina .btn{
+    min-height:3rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:1rem clamp(1.4rem, 3vw, 3rem);
+    background:#FF7F11;
+    color:#fff;
+    border:0.15rem solid #FF7F11;
+    border-radius:0.5rem;
+    font-size:clamp(0.95rem, 1.2vw, 1.1rem);
+    font-weight:700;
+    text-align:center;
+    text-decoration:none;
+    transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease,
+            transform 0.3s ease,
+            box-shadow 0.3s ease;
+}
+
+.startpagina .btn:hover,
+.startpagina .btn:focus-visible{
+    background:#fff;
+    color:#FF7F11;
+    border-color:#fff;
+    transform:translateY(-0.2rem);
+    box-shadow:0 0.5rem 1.25rem rgba(0,0,0,0.2);
+}
+
+.startpagina .right{
+    width:45%;
+    height:100%;
+    overflow:hidden;
+}
+
+.startpagina .right img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+
 
 .navbar{
     position:fixed;
-    top:50%;
-    right:1rem;
-    transform:translateY(-50%);
+    top:0;
+    left:0;
+    width:100%;
+    min-height:6rem;
     display:flex;
-    flex-direction:column;
     align-items:center;
-    gap:0.6rem;
-    padding:0.7rem 0.5rem;
-    background:#FF7F11;
-    border-radius:2rem;
-    box-shadow:0 0.6rem 1.2rem rgba(0,0,0,0.15);
+    justify-content:space-between;
+    gap:2rem;
+    padding:0.7rem 3rem;
+    background:#BCB8B1;
+    box-shadow:0 0.2rem 0.8rem rgba(0,0,0,0.08);
     z-index:1000;
-
-    a{
-        width:2.2rem;
-        height:2.2rem;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        color:#fff;
-        text-decoration:none;
-        font-size:1rem;
-        border-radius:50%;
-        transition:0.3s;
-
-        &:hover,
-        &.active{
-            background:#fff;
-            color:#FF7F11;
-        }
-    }
 }
 
-.over-mij-pagina{
+.logo{
+    display:flex;
+    align-items:center;
+    gap:0.9rem;
+}
+
+.logo img{
+    width:4.5rem;
+    height:4.5rem;
+    object-fit:cover;
+    border:0.18rem solid #FF7F11;
+    border-radius:50%;
+}
+
+.logo h2{
+    margin-bottom:0.15rem;
+    color:#FF7F11;
+    font-size:1.05rem;
+}
+
+.logo p{
+    color:#555;
+    font-size:0.75rem;
+}
+
+.navbar nav{
+    display:flex;
+    align-items:center;
+    gap:2.2rem;
+}
+
+.navbar nav a{
+    position:relative;
+    color:#444;
+    font-size:0.9rem;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.navbar nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-0.45rem;
+    width:0;
+    height:0.15rem;
+    background:#FF7F11;
+    transition:0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active{
+    color:#FF7F11;
+}
+
+.navbar nav a:hover::after,
+.navbar nav a.active::after{
+    width:100%;
+}
+
+.about-hero{
     width:100%;
     min-height:100vh;
-    padding:5rem 8rem 5rem 6rem;
+    display:grid;
+    grid-template-columns:48% 52%;
+    padding-top:6rem;
+    background:#fff;
+}
 
-    .pagina-titel{
-        margin-bottom:4rem;
-        text-align:center;
+.about-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:4rem 3rem 4rem clamp(2rem, 7vw, 8rem);
+    z-index:2;
+}
 
-        > span{
-            display:block;
-            margin-bottom:0.5rem;
-            color:#FF7F11;
-            font-size:1rem;
-            font-weight:700;
-            letter-spacing:0.15rem;
-        }
+.boven-titel{
+    margin-bottom:1.2rem;
+    color:#FF7F11;
+    font-size:0.9rem;
+    font-weight:700;
+    letter-spacing:0.15rem;
+}
 
-        h1{
-            color: #6D696A;
-            font-size:clamp(3.5rem, 7vw, 6rem);
-            line-height:1;
-        }
+.about-content h1{
+    max-width:9ch;
+    color:#6D696A;
+    font-size:clamp(3.5rem, 7vw, 6.5rem);
+    line-height:0.9;
+}
 
-        .titel-lijn{
-            width:4rem;
-            height:0.22rem;
-            margin:1.2rem auto 0;
-            background:#FF7F11;
-            border-radius:1rem;
-        }
+.about-content h1 span{
+    display:block;
+    color:#FF7F11;
+}
+
+.lijn{
+    width:4rem;
+    height:0.22rem;
+    margin:2rem 0;
+    background:#FF7F11;
+}
+
+.about-content p{
+    max-width:34rem;
+    margin-bottom:2rem;
+    color:#6D696A;
+    font-size:clamp(1rem, 1.3vw, 1.15rem);
+    line-height:1.75;
+}
+
+.project-knop{
+    width:max-content;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:1.2rem;
+    padding:0.9rem 1.4rem;
+    background:#FF7F11;
+    color:#fff;
+    border:0.15rem solid #FF7F11;
+    border-radius:0.5rem;
+    font-weight:700;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.project-knop:hover{
+    background:#fff;
+    color:#FF7F11;
+    transform:translateY(-0.2rem);
+}
+
+.about-foto{
+    position:relative;
+    min-height:calc(100vh - 6rem);
+    overflow:hidden;
+}
+
+.about-foto img{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* Zachte overgang zoals in je voorbeeld */
+.about-foto::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    pointer-events:none;
+    background:linear-gradient(
+            90deg,
+            #fff 0%,
+            rgba(255,255,255,0.95) 6%,
+            rgba(255,255,255,0.55) 15%,
+            rgba(255,255,255,0) 30%
+    );
+}
+
+@media(max-width:900px){
+    .navbar{
+        padding:0.7rem 1.5rem;
     }
 
-    .intro{
-        width:100%;
-        max-width:50rem;
-        margin:0 auto;
+    .navbar nav{
+        gap:1rem;
+    }
 
-        h2{
-            margin-bottom:2rem;
-            color: #6D696A;
-            font-size:clamp(2rem, 4vw, 3rem);
-            font-weight:400;
+    .about-hero{
+        grid-template-columns:1fr;
+    }
 
-            span{
-                color:#FF7F11;
-                font-weight:800;
-            }
-        }
+    .about-content{
+        min-height:60vh;
+        padding:9rem 2rem 3rem;
+    }
 
-        .intro-tekst{
-            padding-left:1.6rem;
-            border-left:0.2rem solid #FF7F11;
+    .about-foto{
+        min-height:45vh;
+    }
 
-            p{
-                margin-bottom:1.3rem;
-                color: #6D696A;
-                font-size:1.1rem;
-                line-height:1.8;
-
-                &:last-child{
-                    margin-bottom:0;
-                }
-            }
-        }
-
-        .project-knop{
-            width:max-content;
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            gap:2rem;
-            margin-top:3rem;
-            padding:1rem 1.8rem;
-            background:#FF7F11;
-            border:0.15rem solid #FF7F11;
-            border-radius:0.7rem;
-            color:#fff;
-            text-decoration:none;
-            font-size:1rem;
-            font-weight:700;
-            letter-spacing:0.05rem;
-            text-transform:uppercase;
-            box-shadow:0 0.8rem 1.5rem rgba(0,0,0,0.15);
-            transition:0.3s ease;
-
-            i{
-                transition:0.3s ease;
-            }
-
-            &:hover{
-                background:#fff;
-                color:#FF7F11;
-                transform:translateY(-0.2rem);
-
-                i{
-                    transform:translateX(0.35rem);
-                }
-            }
-        }
+    .about-foto::before{
+        background:linear-gradient(
+                180deg,
+                #fff 0%,
+                rgba(255,255,255,0.85) 8%,
+                rgba(255,255,255,0) 28%
+        );
     }
 }
 
-@media(max-width:1000px){
-    .binnenpagina{
-        padding-left:17rem;
+@media(max-width:650px){
+    .navbar{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:0.7rem;
+        padding:0.7rem 1rem;
     }
 
-    .zijbalk{
-        width:17rem;
-        padding:2.5rem 1.5rem;
-
-        .zijbalk-profiel{
-            .zijbalk-foto{
-                width:10rem;
-                height:10rem;
-            }
-
-            h2{
-                font-size:1.45rem;
-            }
-        }
+    .logo img{
+        width:3.5rem;
+        height:3.5rem;
     }
 
-    .over-mij-pagina{
-        padding:4rem 6rem 4rem 3rem;
+    .navbar nav{
+        width:100%;
+        overflow-x:auto;
+        justify-content:flex-start;
+        gap:1rem;
+        padding-bottom:0.3rem;
+    }
+
+    .navbar nav a{
+        flex-shrink:0;
+        font-size:0.78rem;
+    }
+
+    .about-content{
+        padding:10rem 1.25rem 3rem;
+    }
+
+    .about-content h1{
+        font-size:clamp(3rem, 16vw, 4.5rem);
+    }
+
+    .project-knop{
+        width:100%;
     }
 }
 
-@media(max-width:750px){
-    .binnenpagina{
-        padding-left:0;
-        padding-bottom:6rem;
+@media(max-width:900px){
+
+    .startpagina{
+        flex-direction:column;
     }
 
-    .zijbalk{
-        position:relative;
+    .startpagina .left{
         width:100%;
-        height:auto;
-        padding:2rem 1.5rem;
+        height:62%;
+        padding:1.5rem 2rem;
+    }
 
-        .zijbalk-profiel{
-            .zijbalk-foto{
-                width:8rem;
-                height:8rem;
-                margin-bottom:1rem;
-            }
+    .startpagina .right{
+        width:100%;
+        height:38%;
+    }
 
-            .zijbalk-lijn{
-                margin:1.5rem auto;
-            }
-        }
+    .startpagina .oranje,
+    .startpagina .outline{
+        font-size:clamp(2.3rem, 9vw, 4rem);
+    }
 
-        .zijbalk-links{
-            flex-direction:row;
-            flex-wrap:wrap;
-            justify-content:center;
-            gap:1rem 1.5rem;
+    .startpagina .label{
+        margin:0.7rem 0;
+        padding:0.55rem 1rem;
+    }
 
-            a{
-                font-size:0.8rem;
-            }
-        }
+    .startpagina .left p{
+        margin-bottom:0.5rem;
+        font-size:clamp(0.85rem, 2vw, 1rem);
+        line-height:1.35;
+    }
+
+    .startpagina .buttons{
+        margin-top:0.5rem;
+    }
+
+    .startpagina .btn{
+        min-height:2.5rem;
+        padding:0.65rem 1.2rem;
     }
 
     .navbar{
-        top:auto;
-        right:auto;
-        bottom:1rem;
-        left:50%;
-        transform:translateX(-50%);
-        flex-direction:row;
-        gap:0.5rem;
-        padding:0.6rem 0.8rem;
+        min-height:6rem;
+        padding:0.6rem 2rem;
+    }
+
+    .navbar .logo img{
+        width:4.8rem;
+        height:4.8rem;
+    }
+
+    .navbar .tekst h2{
+        font-size:1.1rem;
+    }
+
+    .navbar .tekst p{
+        font-size:0.8rem;
+    }
+
+    .navbar nav{
+        gap:1.2rem;
+    }
+
+    .navbar nav a{
+        font-size:0.9rem;
     }
 
     .over-mij-pagina{
-        padding:3rem 1.5rem 4rem;
-
-        .pagina-titel{
-            margin-bottom:3rem;
-        }
-
-        .intro{
-            .intro-tekst{
-                padding-left:1rem;
-            }
-
-            .project-knop{
-                width:100%;
-            }
-        }
+        padding-top:8rem;
     }
 }
 
+@media(max-width:650px){
+
+    .startpagina .left{
+        height:68%;
+        padding:1rem 1.25rem;
+    }
+
+    .startpagina .right{
+        height:32%;
+    }
+
+    .startpagina .oranje,
+    .startpagina .outline{
+        font-size:clamp(2rem, 10vw, 3.2rem);
+    }
+
+    .startpagina .label{
+        font-size:0.75rem;
+    }
+
+    .startpagina .buttons{
+        flex-direction:row;
+        gap:0.5rem;
+    }
+
+    .startpagina .btn{
+        width:auto;
+        flex:1;
+        padding:0.55rem 0.7rem;
+        font-size:0.8rem;
+    }
+
+    .navbar{
+        min-height:auto;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0.8rem;
+        padding:0.8rem 1rem;
+    }
+
+    .navbar .logo img{
+        width:3.8rem;
+        height:3.8rem;
+    }
+
+    .navbar .tekst h2{
+        font-size:1rem;
+    }
+
+    .navbar .tekst p{
+        font-size:0.75rem;
+    }
+
+    .navbar nav{
+        width:100%;
+        justify-content:space-between;
+        gap:0.4rem;
+    }
+
+    .navbar nav a{
+        font-size:0.75rem;
+    }
+
+    .over-mij-pagina{
+        padding:9rem 1.25rem 3rem;
+    }
+
+    .over-mij-pagina h1{
+        font-size:clamp(2.5rem, 12vw, 3.5rem);
+    }
+
+    .over-mij-pagina p{
+        font-size:1rem;
+    }
+
+    .project-knop{
+        width:100%;
+    }
+}
+
+@media(max-width:450px){
+
+    .startpagina .left{
+        height:70%;
+        padding:0.8rem 1rem;
+    }
+
+    .startpagina .right{
+        height:30%;
+    }
+
+    .startpagina .oranje,
+    .startpagina .outline{
+        font-size:clamp(1.8rem, 10vw, 2.8rem);
+    }
+
+    .startpagina .label{
+        padding:0.45rem 0.7rem;
+        font-size:0.68rem;
+    }
+
+    .startpagina .left p{
+        font-size:0.78rem;
+        line-height:1.3;
+    }
+
+    .startpagina .btn{
+        min-height:2.2rem;
+        padding:0.45rem 0.5rem;
+        font-size:0.72rem;
+    }
+
+    .navbar .tekst{
+        display:none;
+    }
+
+    .navbar nav{
+        width:100%;
+        overflow-x:auto;
+        justify-content:flex-start;
+        gap:1rem;
+        padding-bottom:0.3rem;
+        scrollbar-width:none;
+    }
+
+    .navbar nav::-webkit-scrollbar{
+        display:none;
+    }
+
+    .navbar nav a{
+        flex-shrink:0;
+    }
+
+    .over-mij-pagina{
+        padding-top:8rem;
+    }
+}
+
+@media(max-height:700px) and (min-width:651px){
+
+    .startpagina .left{
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+
+    .startpagina .left p{
+        margin-bottom:0.5rem;
+        font-size:0.9rem;
+        line-height:1.3;
+    }
+
+    .startpagina .oranje,
+    .startpagina .outline{
+        font-size:clamp(2.5rem, 6vw, 5rem);
+    }
+
+    .startpagina .label{
+        margin:0.7rem 0;
+        padding:0.55rem 1rem;
+    }
+
+    .startpagina .buttons{
+        margin-top:0.5rem;
+    }
+
+    .startpagina .btn{
+        padding:0.65rem 1.2rem;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *,
+    *::before,
+    *::after{
+        scroll-behavior:auto !important;
+        transition-duration:0.01ms !important;
+        animation-duration:0.01ms !important;
+        animation-iteration-count:1 !important;
+    }
+}
