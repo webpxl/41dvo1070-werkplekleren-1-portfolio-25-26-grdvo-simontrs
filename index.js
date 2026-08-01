@@ -5,36 +5,25 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    let previousScrollPosition = window.scrollY;
-    let ticking = false;
-
-    function updateNavbar() {
-        const currentScrollPosition = window.scrollY;
-        const scrollingDown =
-            currentScrollPosition > previousScrollPosition;
-
-        if (scrollingDown && currentScrollPosition > 80) {
-            navbar.classList.add("hide");
-        } else {
-            navbar.classList.remove("hide");
-        }
-
-        if (currentScrollPosition <= 10) {
-            navbar.classList.remove("hide");
-        }
-
-        previousScrollPosition = Math.max(currentScrollPosition, 0);
-        ticking = false;
-    }
+    let lastScroll = window.scrollY;
 
     window.addEventListener(
         "scroll",
         () => {
-            if (!ticking) {
-                window.requestAnimationFrame(updateNavbar);
-                ticking = true;
+            const currentScroll = window.scrollY;
+
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                navbar.classList.add("hide");
+            } else if (currentScroll < lastScroll) {
+                navbar.classList.remove("hide");
             }
+
+            if (currentScroll <= 10) {
+                navbar.classList.remove("hide");
+            }
+
+            lastScroll = Math.max(currentScroll, 0);
         },
-        { passive: true }
+        { passive:true }
     );
 });
