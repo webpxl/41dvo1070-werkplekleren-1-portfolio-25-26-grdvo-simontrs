@@ -5,16 +5,9 @@
 }
 
 :root{
-    --background:#6E675F;
-    --surface:#FFFFFF;
-    --surface-soft:#ECE7E0;
-    --surface-hover:#FFF3E8;
-    --text:#222222;
-    --text-muted:#222222;
-    --accent: #d4a017;
-    --accent-dark:#D9570B;
-    --border:#DDD6CE;
-    --shadow:rgba(55,45,38,0.12);
+    --text:#616060;
+    --text-muted:#616060;
+    --accent: #f0c808;
 }
 
 html{
@@ -26,290 +19,275 @@ body{
     min-height:100vh;
     overflow-x:hidden;
     font-family:Arial, Helvetica, sans-serif;
-    background:#6E675F;
+    background:#FFF3E0;
     color:#222222;
 }
 
-/* STARTPAGINA */
+.startpagina {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
 
-.startpagina{
-    width:100%;
-    height:100vh;
-    display:flex;
-    overflow:hidden;
+    .left {
+        width: 55%;
+        height: 100%;
+        min-width: 0;
+        padding: clamp(2rem, 4vw, 5rem) clamp(2rem, 6vw, 7rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+
+        p {
+            max-width: 40rem;
+            margin-bottom: clamp(0.7rem, 2vh, 1.5rem);
+            color: #222222;
+            font-size: clamp(0.95rem, 1.3vw, 1.4rem);
+            line-height: 1.5;
+        }
+    }
+
+    .oranje,
+    .outline {
+        overflow-wrap: anywhere;
+        font-size: clamp(3rem, 7vw, 7.5rem);
+        font-weight: 900;
+        line-height: 0.95;
+    }
+
+    .oranje {
+        color: #F0C808;
+    }
+
+    .outline {
+        color: transparent;
+        -webkit-text-stroke: 4px #616060;
+    }
+
+    .label {
+        width: fit-content;
+        max-width: 100%;
+        margin: clamp(1rem, 3vh, 2.5rem) 0;
+        padding: 0.8rem 1.5rem;
+        background: #F0C808;
+        color: #FFF3E0;
+        /*border-radius: 0.5rem;*/
+        font-size: clamp(0.8rem, 1.2vw, 1.25rem);
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        text-align: center;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: clamp(1rem, 2vh, 3rem);
+    }
+
+    .btn {
+        min-height: 3rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem clamp(1.4rem, 3vw, 3rem);
+        background: #F0C808;
+        color: #FFF3E0;
+        border-radius: 0.5rem;
+        font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+        transition:
+                background-color 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+        &:hover,
+        &:focus-visible {
+            background: #616060;
+            color: #FFF3E0;
+            transform: translateY(-0.2rem);
+            box-shadow: 0 0.65rem 1.5rem rgb(240 200 8);
+        }
+    }
+
+    .right {
+        width: 45%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
 }
 
-.startpagina .left{
-    width:55%;
-    height:100%;
-    min-width:0;
-    padding:clamp(2rem, 4vw, 5rem) clamp(2rem, 6vw, 7rem);
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    overflow:hidden;
-}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6rem;
 
-.startpagina .oranje,
-.startpagina .outline{
-    overflow-wrap:anywhere;
-    font-size:clamp(3rem, 7vw, 7.5rem);
-    font-weight:900;
-    line-height:0.95;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-.startpagina .oranje{
-    color:#D4A017;
-}
+    padding: 0 3rem;
 
-.startpagina .outline{
-    color:#222222;
-}
+    background: #FFF3E0;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom: 4px solid #F0C808;
+    box-shadow: 0 0.35rem 1.2rem #F0C808;
 
-.startpagina .label{
-    width:fit-content;
-    max-width:100%;
-    margin:clamp(1rem, 3vh, 2.5rem) 0;
-    padding:0.8rem 1.5rem;
-    background:#D4A017;
-    color:#222222;
-    border-radius:0.5rem;
-    font-size:clamp(0.8rem, 1.2vw, 1.25rem);
-    font-weight:700;
-    letter-spacing:0.1rem;
-    text-align:center;
-}
+    z-index: 1000;
 
-.startpagina .left p{
-    max-width:40rem;
-    margin-bottom:clamp(0.7rem, 2vh, 1.5rem);
-    color:#222222;
-    font-size:clamp(0.95rem, 1.3vw, 1.4rem);
-    line-height:1.5;
-}
-
-.startpagina .buttons{
-    display:flex;
-    flex-wrap:wrap;
-    gap:1rem;
-    margin-top:clamp(1rem, 2vh, 3rem);
-}
-
-.startpagina .btn{
-    min-height:3rem;
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:1rem clamp(1.4rem, 3vw, 3rem);
-    background:#D4A017;
-    color:#222222;
-    border-radius:0.5rem;
-    font-size:clamp(0.95rem, 1.2vw, 1.1rem);
-    font-weight:700;
-    text-align:center;
-    text-decoration:none;
-    transition:
-            background-color 0.3s ease,
-            color 0.3s ease,
-            border-color 0.3s ease,
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
-}
-
-.startpagina .btn:hover,
-.startpagina .btn:focus-visible{
-    background:#222222;
-    color:#D4A017;
-    transform:translateY(-0.2rem);
-    box-shadow:0 0.65rem 1.5rem rgba(249,115,22,0.20);
-}
-
-.startpagina .right{
-    width:45%;
-    height:100%;
-    overflow:hidden;
-}
-
-.startpagina .right img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
-}
-
-
-
-.navbar{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:9rem;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:0 3rem;
-
-    background:#6E675F;
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
-    border-bottom:4px solid #D4A017;
-    box-shadow:0 0.35rem 1.2rem var(--shadow);
-
-    z-index:1000;
-
-    transform:translateY(0);
+    transform: translateY(0);
     transition:
             transform 0.35s ease,
             box-shadow 0.3s ease;
-}
 
-/* JavaScript voegt deze class toe */
-.navbar.hide{
-    transform:translateY(-110%);
-}
-
-.logo{
-    display:flex;
-    align-items:center;
-    gap:1rem;
-}
-
-.logo img{
-    width:8rem;
-    height:8rem;
-    object-fit:cover;
-    object-position:center;
-    border:0.18rem solid #D4A017;
-    border-radius:50%;
-}
-
-.logo .tekst h2{
-    margin:0;
-    color:var(--accent);
-    font-size:1.15rem;
-}
-
-.logo .tekst p{
-    margin-top:0.2rem;
-    color:#222222;
-    font-size:0.8rem;
-}
-
-.navbar nav{
-    display:flex;
-    align-items:center;
-    gap:2.5rem;
-}
-
-.navbar nav a{
-    position:relative;
-    color:#222222;
-    font-size:0.95rem;
-    font-weight:600;
-    text-decoration:none;
-    transition:color .2s ease;
-}
-
-.navbar nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-0.45rem;
-    width:0;
-    height:0.15rem;
-    background:var(--accent);
-    transition:width .2s ease;
-}
-
-.navbar nav a:hover,
-.navbar nav a.active{
-    color:var(--accent);
-}
-
-.navbar nav a:hover::after,
-.navbar nav a.active::after{
-    width:100%;
-}
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:900px){
-
-    .navbar{
-        height:5.5rem;
-        padding:0 2rem;
+    &.hide {
+        transform: translateY(-110%);
     }
 
-    .logo img{
-        width:3.8rem;
-        height:3.8rem;
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .tekst {
+            h2 {
+                margin: 0;
+                color: #616060;
+                font-size: 1.15rem;
+            }
+
+            p {
+                margin-top: 0.2rem;
+                color: #616060;
+                font-size: 0.8rem;
+            }
+        }
     }
 
-    .logo .tekst h2{
-        font-size:1rem;
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+
+        a {
+            position: relative;
+            color: #616060;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .10s ease;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -0.45rem;
+                width: 0;
+                height: 0.15rem;
+                background: var(--accent);
+                transition: width .1s ease;
+            }
+
+            &:hover,
+            &.active {
+                color: var(--accent);
+            }
+
+            &:hover::after,
+            &.active::after {
+                width: 100%;
+            }
+        }
     }
 
-    .logo .tekst p{
-        font-size:0.75rem;
+    @media (max-width: 900px) {
+        height: 5.5rem;
+        padding: 0 2rem;
+
+        .logo {
+            img {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+
+            .tekst {
+                h2 {
+                    font-size: 1rem;
+                }
+
+                p {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        nav {
+            gap: 1.5rem;
+
+            a {
+                font-size: 0.85rem;
+            }
+        }
     }
 
-    .navbar nav{
-        gap:1.5rem;
+    @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.8rem;
+
+        height: auto;
+        padding: 1rem;
+
+        .logo {
+            img {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+
+            .tekst {
+                h2 {
+                    font-size: 0.95rem;
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+
+        nav {
+            width: 100%;
+            overflow-x: auto;
+            gap: 1rem;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            a {
+                flex-shrink: 0;
+                font-size: 0.8rem;
+            }
+        }
     }
-
-    .navbar nav a{
-        font-size:0.85rem;
-    }
-
-}
-
-
-@media (max-width:650px){
-
-    .navbar{
-        flex-direction:column;
-        align-items:flex-start;
-        justify-content:center;
-        gap:0.8rem;
-
-        height:auto;
-        padding:1rem;
-    }
-
-    .logo img{
-        width:3.2rem;
-        height:3.2rem;
-    }
-
-    .logo .tekst h2{
-        font-size:0.95rem;
-    }
-
-    .logo .tekst p{
-        font-size:0.7rem;
-    }
-
-    .navbar nav{
-        width:100%;
-        overflow-x:auto;
-        gap:1rem;
-
-        scrollbar-width:none;
-    }
-
-    .navbar nav::-webkit-scrollbar{
-        display:none;
-    }
-
-    .navbar nav a{
-        flex-shrink:0;
-        font-size:0.8rem;
-    }
-
 }
 
 .about-hero{
@@ -319,296 +297,289 @@ body{
     grid-template-columns:48% 52%;
     align-items:start;
     padding-top:6rem;
-    background:var(--background);
-}
-
-.about-content{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items:flex-start;
-    padding:4rem 3rem 4rem clamp(2rem, 7vw, 8rem);
-}
-
-.about-content .boven-titel{
-    display:block;
-    margin-bottom:1.2rem;
-    color:var(--accent);
-    font-size:0.9rem;
-    font-weight:700;
-    letter-spacing:0.15rem;
-}
-
-.about-content h1{
-    max-width:9ch;
-    margin:0;
-    color:var(--text-muted);
-    font-size:clamp(3.5rem, 7vw, 6.5rem);
-    line-height:0.9;
-}
-
-.about-content h1 span{
-    display:block;
-    color:var(--accent);
-}
-
-.about-content .lijn{
-    width:4rem;
-    height:0.22rem;
-    margin:2rem 0;
-    background:var(--accent);
-}
-
-.about-content p{
-    max-width:34rem;
-    margin-bottom:2rem;
-    color:var(--text-muted);
-    font-size:clamp(1rem, 1.3vw, 1.15rem);
-    line-height:1.75;
-}
-
-
-.about-foto{
-    position:relative;
-    width:100%;
-    height:calc(100vh - 6rem);
-    min-height:42rem;
-    overflow:hidden;
-}
-
-.about-foto img{
-    width:100%;
-    height:100%;
-    display:block;
-    object-fit:cover;
-    object-position:center;
-}
-
-.about-foto::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    z-index:1;
-    pointer-events:none;
-    background:linear-gradient(
-            90deg,
-            #6E675F 0%,
-            rgb(110 103 95) 6%,
-            rgb(110 103 95) 15%,
-            rgba(244,241,236,0) 30%
-    );
-}
-
-@media(max-width:900px){
-    .about-hero{
-        grid-template-columns:1fr;
-        padding-top:6rem;
-    }
+    background:#FFF3E0;
 
     .about-content{
-        padding:3rem 2rem;
-    }
-
-    .about-foto{
-        height:50vh;
-        min-height:24rem;
-    }
-
-    .about-foto::before{
-        background:linear-gradient(
-                180deg,
-                #F4F1EC 0%,
-                rgba(244,241,236,0.85) 8%,
-                rgba(244,241,236,0) 28%
-        );
-    }
-}
-
-@media(max-width:650px){
-    .about-content{
-        padding:2.5rem 1.25rem;
-    }
-
-    .about-content h1{
-        font-size:clamp(3rem, 16vw, 4.5rem);
-    }
-
-    .project-knop{
         width:100%;
-    }
-
-    .about-foto{
-        height:42vh;
-        min-height:20rem;
-    }
-}
-
-@media(max-width:450px){
-
-    .startpagina .left{
-        height:70%;
-        padding:0.8rem 1rem;
-    }
-
-    .startpagina .right{
-        height:30%;
-    }
-
-    .startpagina .oranje,
-    .startpagina .outline{
-        font-size:clamp(1.8rem, 10vw, 2.8rem);
-    }
-
-    .startpagina .label{
-        padding:0.45rem 0.7rem;
-        font-size:0.68rem;
-    }
-
-    .startpagina .left p{
-        font-size:0.78rem;
-        line-height:1.3;
-    }
-
-    .startpagina .btn{
-        min-height:2.2rem;
-        padding:0.45rem 0.5rem;
-        font-size:0.72rem;
-    }
-
-    .navbar .tekst{
-        display:none;
-    }
-
-    .navbar nav{
-        width:100%;
-        overflow-x:auto;
+        display:flex;
+        flex-direction:column;
         justify-content:flex-start;
+        align-items:flex-start;
+        padding:4rem 3rem 4rem clamp(2rem, 7vw, 8rem);
+
+        .boven-titel{
+            display:block;
+            margin-bottom:1.2rem;
+            color:var(--accent);
+            font-size:0.9rem;
+            font-weight:700;
+            letter-spacing:0.15rem;
+        }
+
+        h1{
+            max-width:9ch;
+            margin:0;
+            color:#616060;
+            font-size:clamp(3.5rem, 7vw, 6.5rem);
+            line-height:0.9;
+
+            span{
+                display:block;
+                color:var(--accent);
+            }
+        }
+
+        .lijn{
+            width:4rem;
+            height:0.22rem;
+            margin:2rem 0;
+            background:var(--accent);
+        }
+
+        p{
+            max-width:34rem;
+            margin-bottom:2rem;
+            color:#616060;
+            font-size:clamp(1rem, 1.3vw, 1.15rem);
+            line-height:1.75;
+        }
+    }
+
+    .about-foto{
+        position:relative;
+        width:100%;
+        height:calc(100vh - 6rem);
+        min-height:42rem;
+        overflow:hidden;
+
+        img{
+            width:100%;
+            height:100%;
+            display:block;
+            object-fit:cover;
+            object-position:center;
+            border-color:#f0c808;
+        }
+
+        &::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            z-index:1;
+            pointer-events:none;
+            background:linear-gradient(
+                    90deg,
+                    #fff3e0 0%,
+                    rgb(255 243 224) 6%,
+                    rgb(255 243 224) 15%,
+                    rgba(244,241,236,0) 30%
+            );
+        }
+    }
+}
+
+
+.educatie{
+    width:100%;
+    max-width:72rem;
+    margin:0 auto;
+    padding:4rem 2rem;
+    background:#FFF3E0;
+
+    .educatie-titel{
+        display:flex;
+        align-items:center;
         gap:1rem;
-        padding-bottom:0.3rem;
-        scrollbar-width:none;
+        margin-bottom:2rem;
+
+        .titel-icoon{
+            width:3.2rem;
+            height:3.2rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            flex-shrink:0;
+            background:var(--accent, #FF7F11);
+            color:#fff;
+            border-radius:0.8rem;
+            font-size:1.3rem;
+        }
+
+        h2{
+            margin:0;
+            color:#616060;
+            font-size:clamp(1.8rem, 4vw, 2.5rem);
+            font-weight:900;
+            letter-spacing:0.05rem;
+            text-transform:uppercase;
+        }
     }
 
-    .navbar nav::-webkit-scrollbar{
-        display:none;
+    .tijdlijn{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        gap:5rem;
+        padding:1rem 0 1rem 5rem;
+
+        &::before{
+            content:"";
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:1.4rem;
+            width:0.15rem;
+            background:#e1e1e1;
+        }
+
+        .tijdlijn-item{
+            position:relative;
+            display:grid;
+            grid-template-columns:5.5rem minmax(0, 1fr);
+            align-items:center;
+            gap:2rem;
+
+            .tijdlijn-punt{
+                position:absolute;
+                top:50%;
+                left:-4.15rem;
+                width:0.9rem;
+                height:0.9rem;
+                background:var(--accent, #FF7F11);
+                border:0.2rem solid #FFF3E0;
+                border-radius:50%;
+                box-shadow:0 0 0 0.1rem var(--accent, #FF7F11);
+                transform:translateY(-50%);
+            }
+
+            .school-logo{
+                width:5.5rem;
+                height:5.5rem;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                padding:0.5rem;
+                background:#fff;
+                border:0.08rem solid #ddd;
+                border-radius:0.8rem;
+                box-shadow:0 0.35rem 1rem rgba(0,0,0,0.07);
+
+                img{
+                    width:100%;
+                    height:100%;
+                    display:block;
+                    object-fit:contain;
+                }
+            }
+
+            .inhoud{
+                min-width:0;
+
+                .jaar{
+                    display:inline-block;
+                    margin-bottom:0.7rem;
+                    padding:0.4rem 0.75rem;
+                    background:var(--accent, #FF7F11);
+                    color:#fff;
+                    border-radius:0.25rem;
+                    font-size:0.75rem;
+                    font-weight:800;
+                    text-transform:uppercase;
+                }
+
+                h3{
+                    margin:0 0 0.35rem;
+                    color:#616060;
+                    font-size:clamp(1.25rem, 2.5vw, 1.65rem);
+                    font-weight:900;
+                }
+
+                p{
+                    margin:0;
+                    color:var(--accent, #FF7F11);
+                    font-size:1rem;
+                    line-height:1.5;
+                }
+            }
+        }
     }
 
-    .navbar nav a{
-        flex-shrink:0;
+    @media(max-width:700px){
+        padding:3rem 1rem;
+
+        .educatie-titel{
+            .titel-icoon{
+                width:2.8rem;
+                height:2.8rem;
+                font-size:1.1rem;
+            }
+
+            h2{
+                font-size:1.8rem;
+            }
+        }
+
+        .tijdlijn{
+            gap:3.5rem;
+            padding-left:3.8rem;
+
+            &::before{
+                left:1rem;
+            }
+
+            .tijdlijn-item{
+                grid-template-columns:4.5rem minmax(0, 1fr);
+                gap:1rem;
+
+                .tijdlijn-punt{
+                    left:-3.2rem;
+                }
+
+                .school-logo{
+                    width:4.5rem;
+                    height:4.5rem;
+                }
+
+                .inhoud{
+                    .jaar{
+                        font-size:0.7rem;
+                    }
+
+                    h3{
+                        font-size:1.2rem;
+                    }
+
+                    p{
+                        font-size:0.9rem;
+                    }
+                }
+            }
+        }
     }
 
-    .over-mij-pagina{
-        padding-top:8rem;
+    @media(max-width:480px){
+        .tijdlijn{
+            padding-left:2.8rem;
+
+            &::before{
+                left:0.7rem;
+            }
+
+            .tijdlijn-item{
+                grid-template-columns:1fr;
+                gap:1rem;
+
+                .tijdlijn-punt{
+                    top:2rem;
+                    left:-2.45rem;
+                    transform:none;
+                }
+
+                .school-logo{
+                    width:4rem;
+                    height:4rem;
+                }
+            }
+        }
     }
-}
-
-@media(max-height:700px) and (min-width:651px){
-
-    .startpagina .left{
-        padding-top:1rem;
-        padding-bottom:1rem;
-    }
-
-    .startpagina .left p{
-        margin-bottom:0.5rem;
-        font-size:0.9rem;
-        line-height:1.3;
-    }
-
-    .startpagina .oranje,
-    .startpagina .outline{
-        font-size:clamp(2.5rem, 6vw, 5rem);
-    }
-
-    .startpagina .label{
-        margin:0.7rem 0;
-        padding:0.55rem 1rem;
-    }
-
-    .startpagina .buttons{
-        margin-top:0.5rem;
-    }
-
-    .startpagina .btn{
-        padding:0.65rem 1.2rem;
-    }
-}
-
-@media(prefers-reduced-motion:reduce){
-
-    *,
-    *::before,
-    *::after{
-        scroll-behavior:auto !important;
-        transition-duration:0.01ms !important;
-        animation-duration:0.01ms !important;
-        animation-iteration-count:1 !important;
-    }
-}
-
-#opleiding {
-    padding: 100px 10%;
-    background: var(--surface-soft);
-}
-
-#opleiding h2{
-    margin-bottom:3rem;
-    color:var(--text);
-    font-size:clamp(2rem,4vw,3.5rem);
-    letter-spacing:-0.04em;
-}
-
-.timeline {
-    max-width: 850px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.timeline-item {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-left: 5px solid var(--accent);
-
-    border-radius: 18px;
-    padding: 25px 30px;
-
-    transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease, border-color .3s ease;
-}
-
-.timeline-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 18px 40px var(--shadow);
-    background: var(--surface-hover);
-    border-color: rgba(249,115,22,.45);
-    border-left-width: 8px;
-}
-
-.year {
-    min-width: 140px;
-    font-weight: 700;
-    color: var(--accent);
-}
-
-.content strong {
-    display: block;
-    font-size: 1.1rem;
-    color: var(--text);
-}
-
-.content p {
-    margin: 6px 0 0;
-    color: var(--text-muted);
-}
-
-/* Toegankelijke focusstijl */
-a:focus-visible,
-button:focus-visible{
-    outline:3px solid rgba(249,115,22,.35);
-    outline-offset:4px;
 }
