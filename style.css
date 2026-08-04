@@ -1903,10 +1903,1120 @@ img{
     }
 }
 
+.carriere-pagina{
+    width:100%;
+    min-height:100vh;
+    padding:6rem 0 5rem;
+    background:var(--background, #FFF3E0);
+
+    .carriere-hero{
+        width:100%;
+        max-width:78rem;
+        min-height:32rem;
+        display:grid;
+        grid-template-columns:minmax(0, 1fr) minmax(22rem, 0.8fr);
+        align-items:center;
+        gap:3rem;
+        margin:0 auto;
+        padding:5rem 2rem 4rem;
+
+        .hero-tekst{
+            .boven-titel{
+                display:block;
+                margin-bottom:1.2rem;
+                color:var(--accent, #F0C808);
+                font-size:0.8rem;
+                font-weight:800;
+                letter-spacing:0.16rem;
+            }
+
+            h1{
+                max-width:10ch;
+                margin:0;
+                color:var(--text, #616060);
+                font-size:clamp(3.5rem, 7vw, 6.5rem);
+                font-weight:900;
+                line-height:0.95;
+
+                span{
+                    display:block;
+                }
+
+                &::first-letter{
+                    color:inherit;
+                }
+            }
+
+            .hero-lijn{
+                width:4rem;
+                height:0.25rem;
+                margin:2rem 0;
+                background:var(--accent, #F0C808);
+            }
+
+            p{
+                max-width:36rem;
+                margin:0;
+                color:var(--text, #616060);
+                font-size:1.05rem;
+                line-height:1.8;
+            }
+        }
+
+        .hero-illustratie{
+            position:relative;
+            min-height:24rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            .illustratie-cirkel{
+                position:absolute;
+                width:20rem;
+                height:20rem;
+                background:rgba(240,200,8,0.12);
+                border-radius:50%;
+            }
+
+            .fa-briefcase{
+                position:relative;
+                z-index:2;
+                color:rgba(240,200,8,0.48);
+                font-size:12rem;
+            }
+
+            .fa-graduation-cap{
+                position:absolute;
+                right:2rem;
+                bottom:4rem;
+                z-index:3;
+                color:#f3cf55;
+                font-size:7rem;
+                transform:rotate(7deg);
+            }
+        }
+    }
+
+    .carriere-overzicht{
+        width:100%;
+        max-width:78rem;
+        display:grid;
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        align-items:start;
+        gap:3.5rem;
+        margin:0 auto;
+        padding:2rem;
+
+        .ervaring-kolom,
+        .opleiding-kolom{
+            min-width:0;
+
+            .kolom-titel{
+                display:flex;
+                align-items:center;
+                gap:1rem;
+                margin-bottom:2rem;
+
+                .titel-icoon{
+                    width:2.7rem;
+                    height:2.7rem;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    flex-shrink:0;
+                    color:var(--accent, #F0C808);
+                    border:0.12rem solid var(--accent, #F0C808);
+                    border-radius:0.7rem;
+                    font-size:1.05rem;
+                }
+
+                h2{
+                    margin:0;
+                    color:var(--accent, #F0C808);
+                    font-size:1rem;
+                    font-weight:900;
+                    letter-spacing:0.1rem;
+                    text-transform:uppercase;
+                }
+            }
+
+            .tijdlijn{
+                position:relative;
+                display:flex;
+                flex-direction:column;
+                gap:1.3rem;
+                padding-left:1.2rem;
+
+                &::before{
+                    content:"";
+                    position:absolute;
+                    top:0;
+                    bottom:0;
+                    left:0;
+                    width:0.12rem;
+                    background:rgba(240,200,8,0.35);
+                }
+
+                .tijdlijn-punt{
+                    position:absolute;
+                    top:2.5rem;
+                    left:-1.55rem;
+                    width:0.9rem;
+                    height:0.9rem;
+                    background:var(--accent, #F0C808);
+                    border:0.2rem solid var(--background, #FFF3E0);
+                    border-radius:50%;
+                    box-shadow:0 0 0 0.08rem var(--accent, #F0C808);
+                }
+            }
+        }
+
+        .ervaring-kolom{
+            .tijdlijn{
+                .ervaring-kaart{
+                    position:relative;
+                    min-height:12rem;
+                    display:grid;
+                    grid-template-columns:6rem minmax(0, 1fr);
+                    align-items:center;
+                    gap:1.5rem;
+                    padding:1.6rem;
+                    background:#fff;
+                    border:0.08rem solid rgba(97,96,96,0.1);
+                    border-radius:1rem;
+                    box-shadow:0 0.7rem 1.8rem rgba(97,96,96,0.08);
+                    transition:
+                            transform 0.35s ease,
+                            box-shadow 0.35s ease;
+
+                    &::after{
+                        content:"";
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        width:0;
+                        height:0.25rem;
+                        background:var(--accent, #F0C808);
+                        transition:width 0.35s ease;
+                    }
+
+                    &:hover{
+                        transform:translateY(-0.35rem);
+                        box-shadow:0 1rem 2.2rem rgba(97,96,96,0.13);
+
+                        &::after{
+                            width:100%;
+                        }
+
+                        .bedrijf-logo{
+                            transform:rotate(-4deg) scale(1.04);
+                        }
+                    }
+
+                    .bedrijf-logo{
+                        width:6rem;
+                        height:6rem;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        flex-shrink:0;
+                        padding:0.55rem;
+                        overflow:hidden;
+                        background:#fff;
+                        border:0.09rem solid rgb(240 200 8);
+                        border-radius:1rem;
+                        transition:transform 0.35s ease;
+
+                        img{
+                            width:100%;
+                            height:100%;
+                            display:block;
+                            object-fit:contain;
+                            border:0;
+                            border-radius:0;
+                            box-shadow:none;
+                        }
+
+                        &.klein-atheneum{
+                            padding:0;
+                            background:transparent;
+                            border:none;
+                            border-radius:0;
+
+                            img{
+                                width:100%;
+                                height:100%;
+                                object-fit:contain;
+                                transform:scale(1.12);
+                            }
+                        }
+                    }
+
+                    .ervaring-inhoud{
+                        min-width:0;
+
+                        h3{
+                            margin:0 0 0.55rem;
+                            color:var(--text, #616060);
+                            font-size:1.25rem;
+                            font-weight:900;
+                        }
+
+                        .meta{
+                            display:flex;
+                            align-items:center;
+                            gap:0.45rem;
+                            margin-bottom:0.8rem;
+                            color:var(--text, #616060);
+                            font-size:0.88rem;
+
+                            i{
+                                color:var(--accent, #F0C808);
+                            }
+                        }
+
+                        p{
+                            margin:0;
+                            color:var(--text, #616060);
+                            font-size:0.92rem;
+                            line-height:1.65;
+                        }
+                    }
+                }
+            }
+        }
+
+        .opleiding-kolom{
+            .tijdlijn{
+                .opleiding-kaart{
+                    position:relative;
+                    min-height:8.4rem;
+                    display:grid;
+                    grid-template-columns:10rem minmax(0, 1fr);
+                    align-items:center;
+                    gap:1.5rem;
+                    padding:1.6rem;
+                    overflow:hidden;
+                    background:#fff;
+                    border:0.08rem solid rgba(97,96,96,0.1);
+                    border-radius:1.4rem;
+                    box-shadow:0 0.7rem 1.8rem rgba(97,96,96,0.08);
+                    transition:
+                            transform 0.35s ease,
+                            box-shadow 0.35s ease;
+
+                    &::after{
+                        content:"";
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        width:0;
+                        height:0.25rem;
+                        background:var(--accent, #F0C808);
+                        transition:width 0.35s ease;
+                    }
+
+                    .jaar{
+                        min-height:5.5rem;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        padding:1rem;
+                        color:var(--accent, #F0C808);
+                        border-right:0.1rem solid rgba(240,200,8,0.45);
+                        border-radius:0 1rem 1rem 0;
+                        font-size:1rem;
+                        font-weight:900;
+                        text-align:center;
+                        transition:
+                                color 0.35s ease,
+                                background-color 0.35s ease,
+                                border-radius 0.35s ease;
+                    }
+
+                    .opleiding-inhoud{
+                        min-width:0;
+
+                        h3{
+                            margin:0 0 0.45rem;
+                            color:var(--text, #616060);
+                            font-size:1.15rem;
+                            font-weight:900;
+                            line-height:1.25;
+                            transition:color 0.35s ease;
+                        }
+
+                        > p{
+                            margin:0;
+                            color:var(--text, #616060);
+                            font-size:0.9rem;
+                            line-height:1.5;
+                        }
+
+                        .opleiding-uitleg{
+                            max-height:0;
+                            margin-top:0;
+                            overflow:hidden;
+                            color:var(--text, #616060);
+                            font-size:0.9rem;
+                            line-height:1.6;
+                            opacity:0;
+                            transform:translateY(0.6rem);
+                            transition:
+                                    max-height 0.45s ease,
+                                    margin-top 0.35s ease,
+                                    opacity 0.35s ease,
+                                    transform 0.35s ease;
+                        }
+                    }
+
+                    &:hover,
+                    &:focus-within{
+                        transform:translateY(-0.35rem);
+                        box-shadow:0 1rem 2.2rem rgba(97,96,96,0.13);
+
+                        &::after{
+                            width:100%;
+                        }
+
+                        .jaar{
+                            background:var(--accent, #F0C808);
+                            color:#fff;
+                            border-radius:1rem;
+                        }
+
+                        .opleiding-inhoud{
+                            h3{
+                                color:var(--accent, #F0C808);
+                            }
+
+                            .opleiding-uitleg{
+                                max-height:8rem;
+                                margin-top:0.8rem;
+                                opacity:1;
+                                transform:translateY(0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .groei-blok{
+        width:calc(100% - 4rem);
+        max-width:74rem;
+        display:grid;
+        grid-template-columns:7rem minmax(0, 1fr) auto;
+        align-items:center;
+        gap:2rem;
+        margin:4rem auto 0;
+        padding:1.8rem 2rem;
+        background:rgba(240,200,8,0.1);
+        border:0.08rem solid rgba(240,200,8,0.18);
+        border-radius:1.2rem;
+
+        .groei-icoon{
+            width:6rem;
+            height:6rem;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            background:rgba(255,255,255,0.55);
+            color:var(--accent, #F0C808);
+            border-radius:50%;
+            box-shadow:0 0.6rem 1.3rem rgba(97,96,96,0.08);
+            font-size:2.2rem;
+        }
+
+        .groei-tekst{
+            h2{
+                margin:0 0 0.55rem;
+                color:var(--text, #616060);
+                font-size:1.4rem;
+            }
+
+            p{
+                max-width:36rem;
+                margin:0;
+                color:var(--text, #616060);
+                font-size:0.95rem;
+                line-height:1.65;
+            }
+        }
+
+        .contact-knop{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:1.5rem;
+            padding:1rem 1.8rem;
+            background:var(--accent, #F0C808);
+            color:var(--text, #616060);
+            border:0.15rem solid var(--accent, #F0C808);
+            border-radius:0.7rem;
+            font-size:0.85rem;
+            font-weight:900;
+            letter-spacing:0.12rem;
+            text-decoration:none;
+            text-transform:uppercase;
+            white-space:nowrap;
+            transition:
+                    transform 0.3s ease,
+                    background-color 0.3s ease,
+                    color 0.3s ease,
+                    box-shadow 0.3s ease;
+
+            i{
+                transition:transform 0.3s ease;
+            }
+
+            &:hover,
+            &:focus-visible{
+                background:var(--text, #616060);
+                color:#fff;
+                transform:translateY(-0.2rem);
+                box-shadow:0 0.7rem 1.5rem rgba(97,96,96,0.18);
+
+                i{
+                    transform:translateX(0.3rem);
+                }
+            }
+        }
+    }
+
+    @media(max-width:1000px){
+        .carriere-hero{
+            grid-template-columns:1fr 20rem;
+
+            .hero-illustratie{
+                .illustratie-cirkel{
+                    width:16rem;
+                    height:16rem;
+                }
+
+                .fa-briefcase{
+                    font-size:9rem;
+                }
+
+                .fa-graduation-cap{
+                    right:0;
+                    font-size:5rem;
+                }
+            }
+        }
+
+        .carriere-overzicht{
+            gap:2rem;
+        }
+    }
+
+    @media(max-width:850px){
+        padding-top:5.5rem;
+
+        .carriere-hero{
+            grid-template-columns:1fr;
+            padding-top:4rem;
+
+            .hero-tekst{
+                p{
+                    max-width:42rem;
+                }
+            }
+
+            .hero-illustratie{
+                display:none;
+            }
+        }
+
+        .carriere-overzicht{
+            grid-template-columns:1fr;
+            gap:4rem;
+        }
+
+        .groei-blok{
+            grid-template-columns:5rem minmax(0, 1fr);
+
+            .groei-icoon{
+                width:4.5rem;
+                height:4.5rem;
+                font-size:1.6rem;
+            }
+
+            .contact-knop{
+                grid-column:1 / -1;
+                width:100%;
+            }
+        }
+    }
+
+    @media(max-width:600px){
+        padding-top:7.5rem;
+
+        .carriere-hero{
+            min-height:auto;
+            padding:3rem 1.25rem;
+
+            .hero-tekst{
+                h1{
+                    font-size:clamp(3rem, 15vw, 4.5rem);
+                }
+
+                p{
+                    font-size:1rem;
+                }
+            }
+        }
+
+        .carriere-overzicht{
+            padding:1rem 1.25rem;
+
+            .ervaring-kolom{
+                .tijdlijn{
+                    .ervaring-kaart{
+                        grid-template-columns:4.5rem minmax(0, 1fr);
+                        gap:1rem;
+                        padding:1.2rem;
+
+                        .bedrijf-logo{
+                            width:4.5rem;
+                            height:4.5rem;
+                        }
+
+                        .ervaring-inhoud{
+                            h3{
+                                font-size:1.05rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .opleiding-kolom{
+                .tijdlijn{
+                    .opleiding-kaart{
+                        grid-template-columns:1fr;
+                        gap:0.8rem;
+                        padding:1.3rem;
+
+                        .jaar{
+                            min-height:auto;
+                            width:max-content;
+                            padding:0.45rem 0.7rem;
+                            background:rgba(240,200,8,0.14);
+                            border-right:0;
+                            border-radius:0.35rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .groei-blok{
+            width:calc(100% - 2.5rem);
+            grid-template-columns:1fr;
+            gap:1.2rem;
+            padding:1.5rem;
+
+            .groei-icoon{
+                width:4rem;
+                height:4rem;
+            }
+
+            .contact-knop{
+                grid-column:auto;
+            }
+        }
+    }
+
+    @media(max-width:400px){
+        .carriere-overzicht{
+            padding-right:1rem;
+            padding-left:1rem;
+
+            .ervaring-kolom{
+                .tijdlijn{
+                    .ervaring-kaart{
+                        grid-template-columns:1fr;
+
+                        .bedrijf-logo{
+                            width:4rem;
+                            height:4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.projecten-pagina{
+    width:100%;
+    min-height:100vh;
+    padding:6rem 0 5rem;
+    background:var(--background, #FFF3E0);
+
+    .projecten-hero{
+        width:100%;
+        max-width:78rem;
+        margin:0 auto;
+        padding:6rem 2rem 4rem;
+
+        .boven-titel{
+            display:block;
+            margin-bottom:1.2rem;
+            color:var(--accent, #F0C808);
+            font-size:0.8rem;
+            font-weight:800;
+            letter-spacing:0.16rem;
+        }
+
+        h1{
+            max-width:11ch;
+            margin:0;
+            color:var(--text, #616060);
+            font-size:clamp(3.5rem, 7vw, 6.5rem);
+            font-weight:900;
+            line-height:0.95;
+
+            span{
+                display:block;
+                color:var(--accent, #F0C808);
+            }
+        }
+
+        .hero-lijn{
+            width:4rem;
+            height:0.25rem;
+            margin:2rem 0;
+            background:var(--accent, #F0C808);
+        }
+
+        p{
+            max-width:42rem;
+            margin:0;
+            color:var(--text, #616060);
+            font-size:1.05rem;
+            line-height:1.8;
+        }
+    }
+
+    .projecten-lijst{
+        width:100%;
+        max-width:78rem;
+        display:flex;
+        flex-direction:column;
+        gap:6rem;
+        margin:0 auto;
+        padding:2rem;
+
+        .project{
+            position:relative;
+            padding:2.5rem;
+            overflow:hidden;
+            background:rgba(255,255,255,0.55);
+            border:0.08rem solid rgba(97,96,96,0.12);
+            border-radius:1.5rem;
+            box-shadow:0 0.8rem 2rem rgba(97,96,96,0.07);
+
+            transition:
+                    transform 0.35s ease,
+                    background-color 0.35s ease,
+                    box-shadow 0.35s ease;
+
+            &::after{
+                content:"";
+                position:absolute;
+                left:0;
+                bottom:0;
+                width:0;
+                height:0.3rem;
+                background:var(--accent, #F0C808);
+                transition:width 0.4s ease;
+            }
+
+            &:hover{
+                background:#fff;
+                transform:translateY(-0.35rem);
+                box-shadow:0 1rem 2.4rem rgba(97,96,96,0.12);
+
+                &::after{
+                    width:100%;
+                }
+
+                .project-header{
+                    .project-nummer{
+                        background:var(--accent, #F0C808);
+                        color:#fff;
+                        transform:rotate(-5deg);
+                    }
+                }
+            }
+
+
+
+            .project-header{
+                display:grid;
+                grid-template-columns:6rem minmax(0, 1fr);
+                align-items:start;
+                gap:2rem;
+                margin-bottom:2.5rem;
+
+                .project-nummer{
+                    width:5rem;
+                    height:5rem;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+
+                    background:rgba(240,200,8,0.13);
+                    color:var(--accent, #F0C808);
+
+                    border:0.12rem solid var(--accent, #F0C808);
+                    border-radius:1rem;
+
+                    font-size:1.5rem;
+                    font-weight:900;
+
+                    transition:
+                            background-color 0.35s ease,
+                            color 0.35s ease,
+                            transform 0.35s ease;
+                }
+
+                .project-titel{
+                    min-width:0;
+
+                    > span{
+                        display:block;
+                        margin-bottom:0.45rem;
+                        color:var(--accent, #F0C808);
+                        font-size:0.75rem;
+                        font-weight:800;
+                        letter-spacing:0.14rem;
+                    }
+
+                    h2{
+                        margin:0 0 1rem;
+                        color:var(--text, #616060);
+                        font-size:clamp(1.8rem, 4vw, 2.8rem);
+                        font-weight:900;
+                    }
+
+                    p{
+                        max-width:50rem;
+                        margin:0;
+                        color:var(--text, #616060);
+                        font-size:0.98rem;
+                        line-height:1.7;
+                    }
+
+                    .project-tools{
+                        display:flex;
+                        flex-wrap:wrap;
+                        gap:0.7rem;
+                        margin-top:1.4rem;
+
+                        span{
+                            display:inline-flex;
+                            align-items:center;
+                            gap:0.5rem;
+
+                            padding:0.55rem 0.9rem;
+
+                            background:rgba(240,200,8,0.12);
+                            color:var(--text, #616060);
+
+                            border:0.08rem solid rgba(240,200,8,0.35);
+                            border-radius:999rem;
+
+                            font-size:0.82rem;
+                            font-weight:700;
+
+                            i{
+                                color:var(--accent, #F0C808);
+                            }
+                        }
+                    }
+                }
+            }
 
 
 
 
+            .project-galerij{
+                width:85%;
+                margin:0 auto;
+
+                display:grid;
+                grid-template-columns:repeat(3,1fr);
+                gap:1rem;
+
+                .project-afbeelding{
+                    position:relative;
+                    min-width:0;
+                    aspect-ratio:2 / 3;
+                    margin:0;
+                    overflow:hidden;
+                    background:#fff;
+                    border-radius:1rem;
+                    box-shadow:0 0.5rem 1.3rem rgba(0,0,0,0.08);
+
+                    img{
+                        width:100%;
+                        height:100%;
+                        display:block;
+
+                        object-fit:cover;
+                        object-position:center;
+
+                        transition:
+                                transform 0.5s ease,
+                                filter 0.35s ease;
+                    }
+
+                    &::after{
+                        content:"";
+                        position:absolute;
+                        inset:0;
+
+                        background:linear-gradient(
+                                to top,
+                                rgba(0,0,0,0.72) 0%,
+                                rgba(0,0,0,0.15) 45%,
+                                rgba(0,0,0,0) 70%
+                        );
+
+                        opacity:0;
+                        transition:opacity 0.35s ease;
+                    }
+
+                    figcaption{
+                        position:absolute;
+                        left:1rem;
+                        right:1rem;
+                        bottom:1rem;
+                        z-index:2;
+
+                        color:#fff;
+                        font-size:0.9rem;
+                        font-weight:800;
+
+                        opacity:0;
+                        transform:translateY(0.7rem);
+
+                        transition:
+                                opacity 0.35s ease,
+                                transform 0.35s ease;
+                    }
+
+                    &:hover{
+
+                        img{
+                            transform:scale(1.07);
+                            filter:saturate(1.08);
+                        }
+
+                        &::after{
+                            opacity:1;
+                        }
+
+                        figcaption{
+                            opacity:1;
+                            transform:translateY(0);
+                        }
+                    }
+                }
+            }
+
+            &.noors-project{
+
+                .project-galerij{
+                    display:grid;
+                    grid-template-columns:1.45fr 1fr;
+                    grid-template-rows:18rem 18rem;
+                    gap:1.2rem;
+
+                    .project-afbeelding{
+                        aspect-ratio:auto;
+                        height:100%;
+                    }
+
+                    .project-afbeelding:nth-child(1){
+                        grid-row:1 / 3;
+                        grid-column:1;
+                    }
+
+                    .project-afbeelding:nth-child(2){
+                        grid-column:2;
+                        grid-row:1;
+                    }
+
+                    .project-afbeelding:nth-child(3){
+                        grid-column:2;
+                        grid-row:2;
+                    }
+
+                    img{
+                        width:100%;
+                        height:100%;
+                        object-fit:cover;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:900px){
+        padding-top:5.5rem;
+
+        .projecten-hero{
+            padding:4rem 2rem 3rem;
+        }
+
+        .projecten-lijst{
+            gap:4rem;
+
+            .project{
+                .project-galerij{
+                    width:100%;
+                    grid-template-columns:repeat(2, minmax(0, 1fr));
+                }
+
+                &.noors-project{
+                    .project-galerij{
+                        grid-template-columns:1fr 1fr;
+                        grid-template-rows:22rem 16rem;
+
+                        .project-afbeelding:nth-child(1){
+                            grid-column:1 / -1;
+                            grid-row:1;
+                        }
+
+                        .project-afbeelding:nth-child(2){
+                            grid-column:1;
+                            grid-row:2;
+                        }
+
+                        .project-afbeelding:nth-child(3){
+                            grid-column:2;
+                            grid-row:2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:650px){
+        padding-top:7.5rem;
+
+        .projecten-hero{
+            padding:3rem 1.25rem 2.5rem;
+
+            h1{
+                font-size:clamp(3rem, 15vw, 4.5rem);
+            }
+
+            p{
+                font-size:1rem;
+            }
+        }
+
+        .projecten-lijst{
+            gap:3rem;
+            padding:1rem 1.25rem;
+
+            .project{
+                padding:1.5rem;
+
+                .project-header{
+                    grid-template-columns:4rem minmax(0, 1fr);
+                    gap:1rem;
+                    margin-bottom:1.75rem;
+
+                    .project-nummer{
+                        width:4rem;
+                        height:4rem;
+                        font-size:1.2rem;
+                    }
+                }
+
+                .project-galerij{
+                    grid-template-columns:1fr;
+                    gap:1rem;
+
+                    .project-afbeelding{
+                        aspect-ratio:4 / 5;
+
+                        &::after{
+                            opacity:1;
+                        }
+
+                        figcaption{
+                            opacity:1;
+                            transform:none;
+                        }
+                    }
+                }
+
+                &.noors-project{
+                    .project-galerij{
+                        grid-template-columns:1fr;
+                        grid-template-rows:none;
+
+                        .project-afbeelding,
+                        .project-afbeelding:nth-child(1),
+                        .project-afbeelding:nth-child(2),
+                        .project-afbeelding:nth-child(3){
+                            grid-column:auto;
+                            grid-row:auto;
+                            height:auto;
+                            aspect-ratio:4 / 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width:400px){
+        .projecten-hero{
+            padding-right:1rem;
+            padding-left:1rem;
+        }
+
+        .projecten-lijst{
+            padding-right:1rem;
+            padding-left:1rem;
+
+            .project{
+                padding:1.2rem;
+                border-radius:1.1rem;
+
+                .project-header{
+                    grid-template-columns:1fr;
+
+                    .project-nummer{
+                        width:3.5rem;
+                        height:3.5rem;
+                    }
+
+                    .project-titel{
+                        .project-tools{
+                            gap:0.5rem;
+
+                            span{
+                                padding:0.45rem 0.7rem;
+                                font-size:0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 .contact-pagina{
     width:100%;
